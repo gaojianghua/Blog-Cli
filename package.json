@@ -8,10 +8,16 @@
   },
   "devDependencies": {
     "nuxt": "^3.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@varlet/touch-emulator": "^2.6.0",
-    "@varlet/ui": "^2.6.0"
+    "@pinia/nuxt": "^0.4.6",
+    "@varlet/touch-emulator": "^2.6.2",
+    "@varlet/ui": "^2.6.0",
+    "@vueuse/core": "^9.10.0",
+    "@vueuse/nuxt": "^9.10.0",
+    "pinia": "^2.0.28",
+    "sass": "^1.57.1"
   }
 }
