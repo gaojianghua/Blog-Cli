@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
   ],
+  css: ['~/styles/init.css', '~/styles/main.css', 'animate.css/animate.css'],
   app: {
     head: {
       charset: 'utf-8',

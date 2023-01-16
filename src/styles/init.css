@@ -1,28 +1,91 @@
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0 !important;padding:0 !important} 
-body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
-a{color:#2d374b;text-decoration:none} 
-a:hover{color:#cd0200;text-decoration:underline} 
-em{font-style:normal} 
-li{list-style:none} 
-img{border:0;vertical-align:middle} 
-table{border-collapse:collapse;border-spacing:0} 
-p{word-wrap:break-word}
-.cl:after{
-    content:"";
-    display:block;
-    overflow:hidden;
-    clear:both;
-    height:0;
-    visibility:hidden;
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0 !important;
+    padding: 0 !important
 }
-.cl{
-    zoom:1;
+
+html,
+body {
+    word-break: break-word;
+    overflow-y: scroll;
+    font-size: 12px;
+    line-height: normal;
+    transition: background-color .25s;
+    color: var(--color-text);
+    background-color: var(--color-body);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: unset !important;
+    font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial !important;
 }
-.Flex{
-	display: flex;
-	display: -webkit-box; 
-	display: -moz-box; 
-	display: -webkit-flex; 
-	display: -moz-flex; 
-	display: -ms-flexbox; 
+
+a {
+    color: #2d374b;
+    text-decoration: none
+}
+
+a:hover {
+    color: #cd0200;
+    text-decoration: underline
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+.cl:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.cl {
+    zoom: 1;
+}
+
+.Flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
 }

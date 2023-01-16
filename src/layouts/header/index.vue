@@ -9,9 +9,17 @@
  * Copyright (c) 2023 by 15257184434 g598670138@163.com, All Rights Reserved. 
 -->
 <template>
-    <div class='page text-white'>
-        <var-button type="primary" @click="handleClick">切换</var-button>
-        <var-button type="primary" @click="langClick">{{ lang == 'zh-CN' ? 'zh-CN' : 'en-US' }}</var-button>
+    <div class='page'>
+        <div class="container h-100 d-flex a-center">
+            <a class="logo" href="/">
+                <img class="logo-img" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/logo.png" alt="天论">
+                <img class="mobile" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/logoImg.png" alt="天论">
+            </a>
+            <nav class="h-100 d-flex a-center">
+                <var-button type="primary" @click="handleClick">切换</var-button>
+                <var-button type="primary" @click="langClick">{{ lang == 'zh-CN' ? 'zh-CN' : 'en-US' }}</var-button>
+            </nav>
+        </div>
     </div>
 </template>
 
@@ -43,7 +51,60 @@ const langClick = () => {
 </script>
 
 <style lang='scss' scoped>
-.page{
-    
+.page {
+    height: 5rem;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+
+    .container {
+        max-width: 1440px;
+        position: relative;
+        margin: auto;
+        width: 100%;
+
+        .logo {
+            .logo-img {
+                display: block;
+                height: 37px;
+            }
+
+            .mobile {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1149px) {
+    .page {
+        .container {
+            width: 97%;
+            margin: 0 2rem !important;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .page {
+        height: 4.333rem;
+
+        .container {
+            margin: 0 0.917rem 0 1.333rem !important;
+            width: 97%;
+
+            .logo {
+                .logo-img {
+                    display: none;
+                    height: 22px;
+                }
+
+                .mobile {
+                    display: block;
+                    height: 37px;
+                }
+            }
+        }
+    }
 }
 </style>

@@ -27,9 +27,5 @@ function handleClick() {
 </script>
 
 <style lang="scss" scoped>
-body {
-  transition: background-color .25s;
-  color: var(--color-text);
-  background-color: var(--color-body);
-}
+
 </style>
