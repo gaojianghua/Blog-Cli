@@ -4,21 +4,18 @@
  * @LastEditors  : 15257184434 g598670138@163.com
  * @LastEditTime : 2023-01-15 09:56:26
  * @FilePath     : \varlet-nuxt3-example\nuxt.config.ts
- * @Description  : 
- * 
- * Copyright (c) 2023 by 15257184434 g598670138@163.com, All Rights Reserved. 
+ * @Description  :
+ *
+ * Copyright (c) 2023 by 15257184434 g598670138@163.com, All Rights Reserved.
  */
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   srcDir: 'src/',
   build: {
-    transpile: ['@varlet/ui', 'dayjs']
+    transpile: ['@varlet/ui', 'dayjs'],
   },
-  modules: [
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
-  ],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
   css: ['~/styles/init.css', '~/styles/main.css', 'animate.css/animate.css'],
   app: {
     head: {
@@ -43,13 +40,16 @@ export default defineNuxtConfig({
         { name: 'og:url', content: 'https://gaojianghua.cn/docs/' },
         { name: 'og:title', content: 'Wolffy-Document' },
         { name: 'og:image', content: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/%E7%81%B0%E5%A4%AA%E7%8B%BC.png' },
-        { name: 'og:description', content: '技术博客--前端后端运维知识点收录: Vue, React, Taro, ReactNative, Webpack, Vite, UniApp, 小程序, H5, Docker, Git, GoLang, Node, Nest, Mysql, Redis, 数据结构, 算法' },
+        {
+          name: 'og:description',
+          content:
+            '技术博客--前端后端运维知识点收录: Vue, React, Taro, ReactNative, Webpack, Vite, UniApp, 小程序, H5, Docker, Git, GoLang, Node, Nest, Mysql, Redis, 数据结构, 算法',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/tianlun.ico' },
         { rel: 'dns-prefetch', href: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com' },
-      ]
-    }
-  }
+      ],
+    },
+  },
 })
-
