@@ -1,13 +1,14 @@
 <template>
-$END$
+    <div>
+        111
+    </div>
+
 </template>
 
-<script>
-export default {
-name: "about"
-}
+
+<script setup lang="ts">
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

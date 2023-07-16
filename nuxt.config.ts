@@ -13,14 +13,14 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   srcDir: 'src/',
   build: {
-    transpile: ['@varlet/ui', 'dayjs'],
+    transpile: ['dayjs'],
   },
   modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
-  css: ['~/styles/init.css', '~/styles/main.css', 'animate.css/animate.css'],
+  css: ['~/styles/init.css'],
   app: {
     head: {
       charset: 'utf-8',
-      title: 'Wolffy Blog',
+      title: 'GAO BLOG',
       meta: [
         { name: 'description', content: '高江华的博客' },
         { name: 'author', content: '高江华, g598670138@163.com' },
@@ -47,8 +47,9 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/tianlun.ico' },
-        { rel: 'dns-prefetch', href: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com' },
+        { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.ico' },
+        { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
+        { rel: 'dns-prefetch', href: 'https://gaojianghua.cn' },
       ],
     },
   },

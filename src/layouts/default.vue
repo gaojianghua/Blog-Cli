@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
         <AppHeader name="header" />
         <slot />
         <AppFooter name="footer" />

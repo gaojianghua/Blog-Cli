@@ -19,73 +19,57 @@ input,
 textarea,
 select {
     margin: 0 !important;
-    padding: 0 !important
+    padding: 0 !important;
 }
 
 html,
 body {
-    word-break: break-word;
-    overflow-y: scroll;
     font-size: 12px;
-    line-height: normal;
-    transition: background-color .25s;
-    color: var(--color-text);
-    background-color: var(--color-body);
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: unset !important;
-    font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial !important;
+    --main-color: #1AD1A5;
+    --main-color-rgb: rgb(26, 209, 165);
+}
+.main-color{
+    color: #1AD1A5;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: url("https://blog-cli.oss-cn-hangzhou.aliyuncs.com/kfidegf11wd.jpg");
+    background-size: cover;
+}
+a{
+    text-decoration: none !important;
 }
 
-a {
-    color: #2d374b;
-    text-decoration: none
+/* 机械字体包 */
+@font-face {
+    font-family: NumFont;
+    src: url('./integer.ttf');
+    unicode-range: U+30-39;
 }
 
-a:hover {
-    color: #cd0200;
-    text-decoration: underline
-}
-
-em {
-    font-style: normal
-}
-
-li {
-    list-style: none
-}
-
-img {
-    border: 0;
-    vertical-align: middle
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-p {
-    word-wrap: break-word
-}
-
-.cl:after {
-    content: "";
-    display: block;
-    overflow: hidden;
-    clear: both;
+/* 透明滚动条 */
+::-webkit-scrollbar {
+    width: 0;
     height: 0;
-    visibility: hidden;
+    color: transparent !important;
 }
 
-.cl {
-    zoom: 1;
+button::after {
+    border: none;
 }
 
-.Flex {
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
+button {
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: inherit;
+    border-radius: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }

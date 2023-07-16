@@ -1,31 +1,31 @@
-<!--
- * @Author       : 15257184434 g598670138@163.com
- * @Date         : 2023-01-15 09:13:13
- * @LastEditors  : 15257184434 g598670138@163.com
- * @LastEditTime : 2023-01-15 09:27:57
- * @FilePath     : \varlet-nuxt3-example\src\pages\index.vue
- * @Description  : 
- * 
- * Copyright (c) 2023 by 15257184434 g598670138@163.com, All Rights Reserved. 
--->
 <template>
-  <div>
-    <var-tooltip content="Say Hello">
-      <var-button type="primary" @click="handleClick">Say Hello</var-button>
-    </var-tooltip>
+  <div class="flex justify-center">
+      <div class="home w-3/4 flex items-center">
+          <div>
+              
+          </div>
+          <div class="flex flex-col items-center w-1/3 ml-auto">
+              <div class="w-[200px] h-[200px] rounded-full overflow-hidden border border-[#fff]">
+                  <img src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.jpg" alt="作者">
+              </div>
+              <div class="text-[18px] text-[#ababab] mt-10">
+                  历经 {{year}} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest 等等技术能力。
+              </div>
+          </div>
+      </div>
   </div>
 
 </template>
 
 
 <script setup lang="ts">
-import { Snackbar } from '@varlet/ui'
+import { ref } from 'vue'
 
-function handleClick() {
-  Snackbar('Hello')
-}
+let year = ref(new Date().getFullYear() - 2018)
 </script>
 
 <style lang="scss" scoped>
-
+.home{
+    height: calc(100vh - 60px - 0.5rem - 120px);
+}
 </style>
