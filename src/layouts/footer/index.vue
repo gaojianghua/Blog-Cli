@@ -32,14 +32,14 @@ let copyright = ref(new Date().getFullYear())
 <style lang='scss' scoped>
 .page {
     width: 100%;
-    height: 120px;
+    height: 10rem;
 
     .urls {
-        padding-bottom: 10px;
+        padding-bottom: .9rem;
 
         .btnn {
-            border-radius: 6px;
-            padding: 4px 15px;
+            border-radius: .5rem;
+            padding: .33rem 1.2rem;
             border: 1px solid rgba(255, 255, 255, 0.18);
             backdrop-filter: saturate(150%) contrast(50%) blur(2px);
             -webkit-backdrop-filter: saturate(150%) contrast(50%) blur(2px);

@@ -1,10 +1,10 @@
 <template>
     <div class='page p-2'>
-        <div class="page-title px-[100px] flex justify-between">
-            <h1 class="text-[23px] text-[#999] leading-[60px] cursor-pointer">
+        <div class="page-title px-[8.33rem] flex justify-between">
+            <h1 class="text-[1.9rem] text-[#999] leading-[5rem] cursor-pointer">
                 <NuxtLink to="/">Mr. Gao</NuxtLink>
             </h1>
-            <div class="flex leading-[60px] text-[16px] text-[#999]">
+            <div class="flex leading-[5rem] text-[1.3rem] text-[#999]">
                 <div class="ml-12 cursor-pointer" :class="route.path == item.path ? 'main-color':''" v-for="(item, i) in menu" :key="i">
                     <NuxtLink :to="item.path">{{item.name}}</NuxtLink>
                 </div>
@@ -44,12 +44,12 @@ let menu = ref([
 <style lang='scss' scoped>
 .page {
     .page-title {
-        height: 60px;
+        height: 5rem;
         border: 1px solid rgba(26, 209, 165, .1);
         backdrop-filter: contrast(100%);
         -webkit-backdrop-filter: contrast(100%);
         background-color: rgba(255, 255, 255, .1);
-        border-radius: 6px;
+        border-radius: .5rem;
     }
 }
 </style>

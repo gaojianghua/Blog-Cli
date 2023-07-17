@@ -1,31 +1,31 @@
 <template>
     <div class="flex justify-center">
         <div class="home w-3/4 flex items-center justify-between">
-            <div class="list text-[1.5rem] w-7/12 text-[#dddddd] flex flex-wrap justify-between">
-                <div class="item p-5 cursor-pointer h-[13rem] flex flex-col w-[48%] mt-[4rem]" v-for="(item, i) in project" :key="i">
-                    <a class="h-full w-full" target="_blank" :href="item.url">
+            <div class="list py-[4%] h-full text-[1.2rem] w-7/12 text-[#dddddd] flex flex-wrap justify-between">
+                <div class="item p-5 cursor-pointer h-[28%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
+                    <div class="h-full w-full" @click="openURL(item.url)">
                         <div class="item-title flex items-center ">
                             <img class="w-[2rem] h-[2rem] rounded-full" :src="item.logo" alt="logo">
                             <div class="ml-5">{{ item.name }}</div>
-                            <a class="ml-auto w-[2rem] h-[2rem]" :href="item.github" target="_blank">
+                            <div class="ml-auto w-[2rem] h-[2rem]" @click.stop="openURL(item.github)">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                                      viewBox="0 0 24 24" class="icon" data-v-8916576e="">
                                     <path
                                         d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
                                 </svg>
-                            </a>
+                            </div>
                         </div>
-                        <div class="mt-5">
+                        <div class="mt-3 text-[1rem] text-[#adadad]">
                             {{ item.desc }}
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center h-full w-4/12 ml-auto">
-                <div class="w-[200px] h-[200px] rounded-full overflow-hidden border border-[#fff]">
+                <div class="w-[15rem] h-[15rem] rounded-full overflow-hidden border border-[#fff]">
                     <img src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.jpg" alt="作者">
                 </div>
-                <div class="text-[18px] text-[#dddddd] mt-20">
+                <div class="text-[1.2rem] text-[#dddddd] mt-10">
                     <div>历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest
                         等等技术能力。
                     </div>
@@ -91,11 +91,17 @@ let project = ref([
         url: 'https://github.com/gaojianghua/Electron-Vue-TMP'
     }
 ])
+
+// 打开链接
+const openURL = (src: string) => {
+    let obj = open('_blank')
+    obj!.location.href = src
+}
 </script>
 
 <style lang="scss" scoped>
 .home {
-    height: calc(100vh - 60px - 0.5rem - 120px);
+    height: calc(100vh - 5rem - 0.5rem - 10rem);
 
     .list {
         .item {
@@ -103,7 +109,7 @@ let project = ref([
             backdrop-filter: contrast(100%);
             -webkit-backdrop-filter: contrast(100%);
             background-color: rgba(255, 255, 255, .1);
-            border-radius: 6px;
+            border-radius: .5rem;
         }
 
         .item:nth-child(1) {
