@@ -75,5 +75,6 @@ img{
 }
 
 *{
+    color: #f1f1f1;
     box-sizing: border-box !important;
 }

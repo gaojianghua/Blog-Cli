@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex items-center justify-center">
         111
     </div>
 </template>
