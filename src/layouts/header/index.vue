@@ -35,6 +35,14 @@ let menu = ref([
         path:'/article'
     },
     {
+        name:'游戏',
+        path:'/game'
+    },
+    {
+        name:'文稿',
+        path:'/draft'
+    },
+    {
         name:'关于',
         path:'/about'
     }

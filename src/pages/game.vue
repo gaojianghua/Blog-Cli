@@ -8,9 +8,10 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 
+
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .page{
     height: calc(100vh - 5rem - 1.5rem);
     .item {

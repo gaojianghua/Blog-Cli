@@ -1,6 +1,6 @@
 <template>
     <div class="page flex w-[100rem] mx-auto">
-        <div class="item w-[20%] h-full mr-[0.5rem]"></div>
+        <div class="item w-[80%] h-full mr-[0.5rem]"></div>
         <div class="item flex-1 h-full"></div>
     </div>
 </template>
@@ -8,9 +8,10 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 
+
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .page{
     height: calc(100vh - 5rem - 1.5rem);
     .item {
