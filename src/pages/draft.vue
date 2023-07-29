@@ -1,7 +1,12 @@
 <template>
     <div class="page flex w-[100rem] mx-auto">
         <div class="item w-[80%] h-full mr-[0.5rem]"></div>
-        <div class="item flex-1 h-full"></div>
+        <div class="item flex-1 h-full">
+            <div class="flex items-center p-[1%] justify-between">
+                <div class="w-[49%] h-[5rem] text-[1.3rem] main-color flex items-center justify-center">重置</div>
+                <div class="w-[49%] h-[5rem] text-[1.3rem] main-color flex items-center justify-center">打印</div>
+            </div>
+        </div>
     </div>
 </template>
 
