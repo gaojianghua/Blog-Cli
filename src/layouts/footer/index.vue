@@ -11,11 +11,11 @@
 <template>
     <div class='page flex flex-col items-center fixed bottom-0 left-0 py-2'>
         <div class='urls flex'>
-            <a class='btnn cursor-pointer' target="_blank" href="https://wolffy.gaojianghua.cn/home">Wolffy印记</a>
+            <a class='btnn box cursor-pointer' target="_blank" href="https://wolffy.gaojianghua.cn/home">Wolffy印记</a>
             <div class='px-2'/>
-            <a class="btnn cursor-pointer" target="_blank" href="https://gaojianghua.cn/docs/">作者文档</a>
+            <a class="btnn box cursor-pointer" target="_blank" href="https://gaojianghua.cn/docs/">作者文档</a>
             <div class='px-2'/>
-            <a class="btnn cursor-pointer" target="_blank" href="#">服务官网</a>
+            <a class="btnn box cursor-pointer" target="_blank" href="#">服务官网</a>
         </div>
         <div class='text cursor-pointer mt-3'>邮箱：g598670138@163.com 个人微信号：woshigaojianghua</div>
         <a target="_blank" rel="noreferrer" href="https://beian.miit.gov.cn" class='text cursor-pointer mt-3'>Copyright ©
@@ -38,12 +38,7 @@ let copyright = ref(new Date().getFullYear())
         padding-bottom: .9rem;
 
         .btnn {
-            border-radius: .5rem;
             padding: .33rem 1.2rem;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            backdrop-filter: saturate(150%) contrast(50%) blur(2px);
-            -webkit-backdrop-filter: saturate(150%) contrast(50%) blur(2px);
-            background-color: rgba(255, 255, 255, .5);
         }
 
         .btnn:hover {

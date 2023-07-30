@@ -2,8 +2,8 @@
     <div class="flex justify-center">
         <div class="home w-3/4 flex items-center justify-between">
             <div class="list py-[4%] h-full text-[1.2rem] w-7/12 text-[#dddddd] flex flex-wrap justify-between">
-                <div class="item p-5 cursor-pointer h-[28%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
-                    <div class="h-full w-full" @click="openURL(item.url)">
+                <div class="item box p-3 cursor-pointer h-[30%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
+                    <div class="h-full flex flex-col w-full" @click="openURL(item.url)">
                         <div class="item-title flex items-center ">
                             <img class="w-[2rem] h-[2rem] rounded-full" :src="item.logo" alt="logo">
                             <div class="ml-5">{{ item.name }}</div>
@@ -15,8 +15,13 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="mt-3 text-[1rem] text-[#adadad]">
+                        <div class="mt-3 text-[1rem] text-[#adadad] tracking-wider">
                             {{ item.desc }}
+                        </div>
+                        <div class="tags flex items-center mt-auto">
+                            <div class="text-[1rem] box py-0.5 px-3 mr-3" v-for="(tag, i) in item.tags" :key="i">
+                                {{tag}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -26,14 +31,18 @@
                     <img src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.jpg" alt="作者">
                 </div>
                 <div class="text-[1.2rem] text-[#dddddd] mt-10">
-                    <div>历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest
-                        等等技术能力。
+                    <div>能力描述：历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest Mysql Redis Docker Nginx Shell
+                        等等前后端及运维技术能力。
                     </div>
-                    <div class="mt-3">历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC
-                        Nest 等等技术能力。
+                </div>
+                <div class="flex items-center justify-around w-full mt-5">
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="w-[7rem] h-[7rem]" src="https://official-document.oss-cn-hangzhou.aliyuncs.com/qrcode_for_gh_4c360c5cb61a_258.jpg" alt="微信公众号">
+                        <span class="main-color text-[1.2rem] mt-1">公众号：程序员印记</span>
                     </div>
-                    <div class="mt-3">历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC
-                        Nest 等等技术能力。
+                    <div class="flex flex-col items-center justify-center">
+                        <img class="w-[7rem] h-[7rem]" src="https://official-document.oss-cn-hangzhou.aliyuncs.com/IMG_7086(20230730-131307).JPG" alt="微信公众号">
+                        <span class="main-color text-[1.2rem] mt-1">技术交流群：指间运动</span>
                     </div>
                 </div>
             </div>
@@ -53,42 +62,70 @@ let project = ref([
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/wolffyPink.png',
         desc: '一个导航站平台，可自定义印记卡片和导航链接。',
         github: 'https://github.com/gaojianghua/Official-Document',
-        url: 'https://wolffy.gaojianghua.cn/home'
+        url: 'https://wolffy.gaojianghua.cn/home',
+        tags: [
+            'NextJs',
+            'TypeScript',
+            'Axios'
+        ]
     },
     {
         name: 'UniApp-TMP',
         logo: 'https://gongyue-shop.oss-cn-hangzhou.aliyuncs.com/GongYueLogo.png',
         desc: 'UniApp骨架模板，集成实际业务中所需的各种封装工具。使开发者快速上手开发或项目二开。',
         github: 'https://github.com/gaojianghua/UniApp-TMP',
-        url: 'https://github.com/gaojianghua/UniApp-TMP'
+        url: 'https://github.com/gaojianghua/UniApp-TMP',
+        tags: [
+            'UniApp',
+            'Uview UI',
+            'Vuex'
+        ]
     },
     {
         name: 'Technical-Site',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png',
         desc: '个人技术文档, 积累记录学习笔记。',
         github: 'https://github.com/gaojianghua/Technical-Site',
-        url: 'https://gaojianghua.cn/docs/'
+        url: 'https://gaojianghua.cn/docs/',
+        tags: [
+            'VitePress'
+        ]
     },
     {
         name: 'Vue-B-TMP',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
         desc: 'Vue3版本-后台管理系统模板',
         github: 'https://github.com/gaojianghua/Vue-B-TMP',
-        url: 'https://github.com/gaojianghua/Vue-B-TMP'
+        url: 'https://github.com/gaojianghua/Vue-B-TMP',
+        tags: [
+            'Vue',
+            'Element-Plus',
+            'Axios'
+        ]
     },
     {
         name: 'Vue-C-TMP',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
         desc: 'Vue3版本-C端响应式模板',
         github: 'https://github.com/gaojianghua/Vue-C-TMP',
-        url: 'https://github.com/gaojianghua/Vue-C-TMP'
+        url: 'https://github.com/gaojianghua/Vue-C-TMP',
+        tags: [
+            'Vue',
+            'Element-Plus',
+            'Axios'
+        ]
     },
     {
         name: 'Electron-Vue-TMP',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
         desc: '基于Vue3与Electron的桌面端应用模板',
         github: 'https://github.com/gaojianghua/Electron-Vue-TMP',
-        url: 'https://github.com/gaojianghua/Electron-Vue-TMP'
+        url: 'https://github.com/gaojianghua/Electron-Vue-TMP',
+        tags: [
+            'Vue',
+            'Element-Plus',
+            'Axios'
+        ]
     }
 ])
 
@@ -105,11 +142,7 @@ const openURL = (src: string) => {
 
     .list {
         .item {
-            border: 1px solid rgba(26, 209, 165, .1);
-            backdrop-filter: contrast(100%);
-            -webkit-backdrop-filter: contrast(100%);
-            background-color: rgba(255, 255, 255, .1);
-            border-radius: .5rem;
+
         }
 
         .item:nth-child(1) {

@@ -1,7 +1,7 @@
 <template>
     <div class="page">
         <div class="tree mx-auto flex flex-col justify-center items-center">
-            <div class="tree-main w-[3rem] h-[200rem] relative bottom-[-1rem]">
+            <div class="tree-main box w-[3rem] h-[200rem] relative bottom-[-1rem]">
 
             </div>
             <div class="tree-footer flex items-center flex-col justify-center">
@@ -24,10 +24,7 @@ import { ref } from 'vue'
     overflow-y: scroll;
     .tree{
         .tree-main{
-            backdrop-filter: contrast(100%);
-            -webkit-backdrop-filter: contrast(100%);
-            background-color: rgba(255, 255, 255, .1);
-            border: 1px solid rgba(26, 209, 165, .2);
+            border-radius: 0;
         }
         .tree-footer {
             width: 50rem;

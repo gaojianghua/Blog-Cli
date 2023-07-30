@@ -1,13 +1,14 @@
 <template>
     <div class="page flex w-[100rem] mx-auto">
-        <div class="item w-[14%] h-full mr-[0.5rem]">
+        <div class="box w-[14%] h-full mr-[0.5rem]">
             <div class="text-[1.5rem] cursor-pointer flex justify-around items-center h-[5rem] ml-[2rem] tracking-[2rem]"
                  :class="menuIndex == item.type ? 'main-color' : 'text-white'"
                  v-for="(item, i) in menus" :key="i" @click="chooseMenu(item.type)">
                 {{item.name}}
             </div>
         </div>
-        <div class="item flex-1 h-full"></div>
+        <div class="box flex-1 h-full"></div>
+        <div class="box w-[20%] h-full ml-[0.5rem]"></div>
     </div>
 </template>
 
@@ -55,12 +56,5 @@ const chooseMenu = (i: number) => {
 <style lang="scss" scoped>
 .page{
     height: calc(100vh - 5rem - 1.5rem);
-    .item {
-        border: 1px solid rgba(26, 209, 165, .1);
-        backdrop-filter: contrast(100%);
-        -webkit-backdrop-filter: contrast(100%);
-        background-color: rgba(255, 255, 255, .1);
-        border-radius: .5rem;
-    }
 }
 </style>

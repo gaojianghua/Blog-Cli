@@ -1,6 +1,6 @@
 <template>
     <div class='page p-2'>
-        <div class="page-title px-[8.33rem] flex justify-between">
+        <div class="page-title box px-[8.33rem] flex justify-between">
             <h1 class="text-[1.9rem] text-[#999] leading-[5rem] cursor-pointer">
                 <NuxtLink to="/">Mr. Gao</NuxtLink>
             </h1>
@@ -53,11 +53,6 @@ let menu = ref([
 .page {
     .page-title {
         height: 5rem;
-        border: 1px solid rgba(26, 209, 165, .1);
-        backdrop-filter: contrast(100%);
-        -webkit-backdrop-filter: contrast(100%);
-        background-color: rgba(255, 255, 255, .1);
-        border-radius: .5rem;
     }
 }
 </style>
