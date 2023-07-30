@@ -6,7 +6,7 @@
             </h1>
             <div class="flex leading-[5rem] text-[1.3rem] text-[#999]">
                 <div class="ml-12 cursor-pointer" :class="route.path == item.path ? 'main-color':''" v-for="(item, i) in menu" :key="i">
-                    <NuxtLink :to="item.path">{{item.name}}</NuxtLink>
+                    <NuxtLink class="py-6" :to="item.path">{{item.name}}</NuxtLink>
                 </div>
                 <a class="ml-12 my-auto w-[3rem] h-[3rem]" href="https://github.com/gaojianghua" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"

@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import {ref} from 'vue'
 
-const menuIndex = ref(1)
+const menuIndex = ref(0)
 const menus = ref([
     {
         name: '华容道',
