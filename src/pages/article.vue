@@ -4,12 +4,16 @@
             <div
                 class="text-[1.5rem] cursor-pointer flex justify-center items-center h-[5rem] ml-[2rem] tracking-[2rem]"
                 :class="menuIndex == item.type ? 'main-color' : 'text-white'"
-                v-for="(item, i) in menus" :key="i" @click="chooseMenu(item.type)">
+                v-for="(item, i) in articleMenus" :key="i" @click="chooseMenu(item.type)">
                 {{ item.name }}
             </div>
         </div>
-        <div class="box flex-1 h-full p-3 overflow-y-scroll">
-            <div class="box flex items-center justify-between mb-3 p-3" v-for="(item, j) in list" :key="j">
+        <div ref="el" class="box flex-1 h-full p-3 overflow-y-scroll">
+            <div v-if="list.length === 0" class="flex flex-col items-center h-full w-full justify-center">
+                <img class="w-[30rem] h-[30rem]" src="@/static/image/list-empty.png" alt="列表为空">
+                <span class="mt-5 text-[#ccc] text-[1.2rem]">作者很懒，未发布新的内容！</span>
+            </div>
+            <div v-else class="box flex items-center justify-between mb-3 p-3" v-for="(item, j) in list" :key="j">
                 <div class="child-left w-[70%] flex-1 h-[8rem] flex flex-col justify-between">
                     <div class="child-title text-[1.3rem] leading-none">
                         {{item.title}}
@@ -36,135 +40,31 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import data from "@/data";
+import { useScroll } from '@vueuse/core'
 
+const el = ref<HTMLElement | null>(null)
 const menuIndex = ref(0)
-const menus = ref([
-    {
-        name: '全部',
-        type: 0
-    },
-    {
-        name: '前端',
-        type: 1
-    },
-    {
-        name: '后端',
-        type: 2
-    },
-    {
-        name: '运维',
-        type: 3
-    },
-    {
-        name: '生活',
-        type: 4
-    },
-    {
-        name: '娱乐',
-        type: 5
-    },
-    {
-        name: '其他',
-        type: 6
-    }
-])
-
-const list = ref([
-    {
-        title: 'Vue技术揭秘之watch监听器',
-        desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'React技术揭秘之useEffect',
-        desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'Vue技术揭秘之watch监听器',
-        desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'React技术揭秘之useEffect',
-        desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'Vue技术揭秘之watch监听器',
-        desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'React技术揭秘之useEffect',
-        desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'Vue技术揭秘之watch监听器',
-        desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'React技术揭秘之useEffect',
-        desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'Vue技术揭秘之watch监听器',
-        desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    },
-    {
-        title: 'React技术揭秘之useEffect',
-        desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
-    }
-])
+const articleMenus = ref(data.articleMenus)
+const list = ref(data.list)
 
 const chooseMenu = (i: number) => {
     menuIndex.value = i
+    switch (i) {
+        case 0:
+            list.value = data.list
+            break
+        default:
+            list.value = []
+            break
+    }
 }
+const { arrivedState } = useScroll(el)
+watch(arrivedState, (newValue) => {
+    if (newValue.bottom){
+        list.value = [...list.value, ...data.list]
+    }
+})
 
 </script>
 

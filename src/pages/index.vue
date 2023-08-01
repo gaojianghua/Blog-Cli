@@ -35,14 +35,14 @@
                         等等前后端及运维技术能力。
                     </div>
                 </div>
-                <div class="flex items-center justify-around w-full mt-5">
+                <div class="flex items-center justify-around w-full mt-10">
                     <div class="flex flex-col items-center justify-center">
                         <img class="w-[7rem] h-[7rem]" src="https://official-document.oss-cn-hangzhou.aliyuncs.com/qrcode_for_gh_4c360c5cb61a_258.jpg" alt="微信公众号">
-                        <span class="main-color text-[1.2rem] mt-1">公众号：程序员印记</span>
+                        <span class="main-color text-[1.2rem] mt-2">公众号：程序员印记</span>
                     </div>
                     <div class="flex flex-col items-center justify-center">
                         <img class="w-[7rem] h-[7rem]" src="https://official-document.oss-cn-hangzhou.aliyuncs.com/IMG_7086(20230730-131307).JPG" alt="微信公众号">
-                        <span class="main-color text-[1.2rem] mt-1">技术交流群：指间运动</span>
+                        <span class="main-color text-[1.2rem] mt-2">技术交流群：指间运动</span>
                     </div>
                 </div>
             </div>
