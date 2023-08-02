@@ -1,7 +1,7 @@
 <template>
     <div class="page flex w-[100rem] mx-auto">
         <div class="box w-[14%] h-full mr-[0.5rem]">
-            <div class="text-[1.5rem] cursor-pointer flex justify-around items-center h-[5rem] ml-[2rem] tracking-[2rem]"
+            <div class="text-[1.5rem] text-cd cursor-pointer flex justify-around items-center h-[5rem] ml-[2rem] tracking-[2rem]"
                  :class="menuIndex == item.type ? 'main-color' : 'text-white'"
                  v-for="(item, i) in gameMenus" :key="i" @click="chooseMenu(item.type)">
                 {{item.name}}

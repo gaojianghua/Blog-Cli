@@ -2,7 +2,7 @@
     <div class="page flex w-[100rem] mx-auto">
         <div class="box w-[10%] h-full mr-[0.5rem]">
             <div
-                class="text-[1.5rem] cursor-pointer flex justify-center items-center h-[5rem] ml-[2rem] tracking-[2rem]"
+                class="text-[1.5rem] text-cd cursor-pointer flex justify-center items-center h-[5rem] ml-[2rem] tracking-[2rem]"
                 :class="menuIndex == item.type ? 'main-color' : 'text-white'"
                 v-for="(item, i) in articleMenus" :key="i" @click="chooseMenu(item.type)">
                 {{ item.name }}
@@ -13,7 +13,7 @@
                 <img class="w-[30rem] h-[30rem]" src="@/static/image/list-empty.png" alt="列表为空">
                 <span class="mt-5 text-[#ccc] text-[1.2rem]">作者很懒，未发布新的内容！</span>
             </div>
-            <div v-else class="box flex items-center justify-between mb-3 p-3" v-for="(item, j) in list" :key="j">
+            <div v-else class="box box-cd flex cursor-pointer items-center justify-between mb-3 p-3" v-for="(item, j) in list" :key="j" @click="openDetails(j)">
                 <div class="child-left w-[70%] flex-1 h-[8rem] flex flex-col justify-between">
                     <div class="child-title text-[1.3rem] leading-none">
                         {{item.title}}
@@ -40,14 +40,17 @@
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import {useRouter} from "vue-router";
 import data from "@/data";
 import { useScroll } from '@vueuse/core'
 
+const router = useRouter()
 const el = ref<HTMLElement | null>(null)
 const menuIndex = ref(0)
 const articleMenus = ref(data.articleMenus)
 const list = ref(data.list)
 
+const {arrivedState } = useScroll(el)
 const chooseMenu = (i: number) => {
     menuIndex.value = i
     switch (i) {
@@ -59,9 +62,13 @@ const chooseMenu = (i: number) => {
             break
     }
 }
-const { arrivedState } = useScroll(el)
+
+const openDetails = (i:number) => {
+    router.push(`/article-details/${i}`)
+}
+
 watch(arrivedState, (newValue) => {
-    if (newValue.bottom){
+    if (!newValue.top){
         list.value = [...list.value, ...data.list]
     }
 })

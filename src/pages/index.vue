@@ -2,7 +2,7 @@
     <div class="flex justify-center">
         <div class="home w-3/4 flex items-center justify-between">
             <div class="list py-[4%] h-full text-[1.2rem] w-7/12 text-[#dddddd] flex flex-wrap justify-between">
-                <div class="item box p-3 cursor-pointer h-[30%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
+                <div class="item box box-cd p-3 cursor-pointer h-[30%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
                     <div class="h-full flex flex-col w-full" @click="openURL(item.url)">
                         <div class="item-title flex items-center ">
                             <img class="w-[2rem] h-[2rem] rounded-full" :src="item.logo" alt="logo">

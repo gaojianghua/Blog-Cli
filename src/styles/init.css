@@ -29,7 +29,7 @@ body {
     --main-color-rgb: rgb(26, 209, 165);
 }
 .main-color{
-    color: #1AD1A5;
+    color: var(--main-color);
 }
 .main{
     width: 100vw;
@@ -84,4 +84,11 @@ img{
     -webkit-backdrop-filter: contrast(100%);
     background-color: rgba(255, 255, 255, .1);
     border-radius: .5rem;
+}
+.box-cd:hover{
+    border: 1px solid rgba(26, 209, 165, .8);
+    background-color: rgba(255, 255, 255, .2);
+}
+.text-cd:hover{
+    color: var(--main-color);
 }
