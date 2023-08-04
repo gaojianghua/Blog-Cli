@@ -10,7 +10,7 @@
         </div>
         <div ref="el" class="box flex-1 h-full p-3 overflow-y-scroll">
             <div v-if="list.length === 0" class="flex flex-col items-center h-full w-full justify-center">
-                <img class="w-[30rem] h-[30rem]" src="@/static/image/list-empty.png" alt="列表为空">
+                <img class="w-[30rem] h-[30rem]" src="@/assets/image/list-empty.png" alt="列表为空">
                 <span class="mt-5 text-[#ccc] text-[1.2rem]">作者很懒，未发布新的内容！</span>
             </div>
             <div v-else class="box box-cd flex cursor-pointer items-center justify-between mb-3 p-3" v-for="(item, j) in list" :key="j" @click="openDetails(j)">

@@ -44,7 +44,7 @@ a{
 /* 机械字体包 */
 @font-face {
     font-family: NumFont;
-    src: url('./integer.ttf');
+    src: url('integer.ttf');
     unicode-range: U+30-39;
 }
 

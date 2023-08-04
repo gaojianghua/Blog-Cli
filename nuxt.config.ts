@@ -15,8 +15,19 @@ export default defineNuxtConfig({
   build: {
     transpile: ['dayjs'],
   },
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
-  css: ['~/styles/init.css'],
+  components: [
+    {
+      path: '@/components/public',
+      extensions: ['.vue'],
+    },
+  ],
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
+    },
+  },
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss', '@pinia-plugin-persistedstate/nuxt'],
+  css: ['~/assets/styles/init.css'],
   app: {
     head: {
       charset: 'utf-8',
