@@ -2,7 +2,7 @@
     <div class="flex justify-center">
         <div class="home w-3/4 flex items-center justify-between">
             <div class="list py-[4%] h-full text-[1.2rem] w-7/12 text-[#dddddd] flex flex-wrap justify-between">
-                <div class="item box box-cd p-3 cursor-pointer h-[30%] flex flex-col w-[48%]" v-for="(item, i) in project" :key="i">
+                <div class="item box box-cd p-3 cursor-pointer h-[30%] flex flex-col w-[48.75%]" v-for="(item, i) in project" :key="i">
                     <div class="h-full flex flex-col w-full" @click="openURL(item.url)">
                         <div class="item-title flex items-center ">
                             <img class="w-[2rem] h-[2rem] rounded-full" :src="item.logo" alt="logo">
@@ -27,13 +27,19 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center h-full w-4/12 ml-auto">
-                <div class="w-[15rem] h-[15rem] rounded-full overflow-hidden border border-[#fff]">
-                    <img src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.jpg" alt="作者">
+                <div class="w-[15rem] h-[15rem] flex items-center justify-center rounded-full overflow-hidden border-[0.3rem] border-[#fff]">
+                    <img class="w-[16rem] h-[16rem] max-w-none" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png" alt="作者头像">
                 </div>
-                <div class="text-[1.2rem] text-[#dddddd] mt-10">
-                    <div>能力描述：历经 {{ year }} 年开发历程，掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest Mysql Redis Docker Nginx Shell
+                <div class="text-[#dddddd] mt-10">
+                    <h1 class="text-[3rem] tracking-wider">你好👋</h1>
+                    <div class="text-[1.5rem] indent-[2em] mt-2 leading-[2.5rem] tracking-wider">
+                        我是一名全栈开发者，历经 {{ year }} 年开发历程。
+                    </div>
+                    <div class="text-[1.5rem] indent-[2em] leading-[2.5rem] tracking-wider">
+                        掌握 Vue系列 React系列 UniApp系列 Electron Gin GRPC Nest Mysql Redis Docker Nginx Shell
                         等等前后端及运维技术能力。
                     </div>
+                    <div class="text-[1.5rem] tracking-wider text-right mt-5">灰太狼 & 社区第一菜狗</div>
                 </div>
                 <div class="flex items-center justify-around w-full mt-10">
                     <div class="flex flex-col items-center justify-center">
