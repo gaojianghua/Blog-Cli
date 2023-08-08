@@ -26,11 +26,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center h-full w-4/12 ml-auto">
+            <div class="flex flex-col items-center justify-center h-full w-4/12 ml-auto mb-[1rem]">
                 <div class="w-[15rem] h-[15rem] flex items-center justify-center rounded-full overflow-hidden border-[0.3rem] border-[#fff]">
-                    <img class="w-[16rem] h-[16rem] max-w-none" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png" alt="作者头像">
+                    <img class="w-[15rem] h-[15rem] max-w-none" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png" alt="作者头像">
                 </div>
-                <div class="text-[#dddddd] mt-10">
+                <div class="text-[#dddddd] mt-7">
                     <h1 class="text-[3rem] tracking-wider">你好👋</h1>
                     <div class="text-[1.5rem] indent-[2em] mt-2 leading-[2.5rem] tracking-wider">
                         我是一名全栈开发者，历经 {{ year }} 年开发历程。
@@ -41,7 +41,7 @@
                     </div>
                     <div class="text-[1.5rem] tracking-wider text-right mt-5">灰太狼 & 社区第一菜狗</div>
                 </div>
-                <div class="flex items-center justify-around w-full mt-10">
+                <div class="flex items-center justify-around w-full mt-7">
                     <div class="flex flex-col items-center justify-center">
                         <img class="w-[7rem] h-[7rem]" src="https://official-document.oss-cn-hangzhou.aliyuncs.com/qrcode_for_gh_4c360c5cb61a_258.jpg" alt="微信公众号">
                         <span class="main-color text-[1.2rem] mt-2">公众号：程序员印记</span>

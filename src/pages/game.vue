@@ -7,7 +7,12 @@
                 {{item.name}}
             </div>
         </div>
-        <div class="box flex-1 h-full"></div>
+        <div class="box flex-1 p-3 h-full">
+            <div v-if="menuIndex == 0"></div>
+            <div v-else class="flex flex-col items-center justify-center">
+                <span class="mt-5 text-[#ccc] text-[1.2rem]">游戏开发中，敬请期待哦</span>
+            </div>
+        </div>
         <div class="box w-[20%] h-full ml-[0.5rem]"></div>
     </div>
 </template>

@@ -1,11 +1,10 @@
 <template>
-    <div class="page">
-        <div class="tree mx-auto flex flex-col justify-center items-center">
-            <div class="tree-main box w-[3rem] h-[200rem] relative bottom-[-1rem]">
-
-            </div>
+    <div class="page flex flex-col justify-center items-center">
+        <div></div>
+        <div class="tree mx-auto mt-auto flex flex-col justify-center items-center">
+            <div></div>
             <div class="tree-footer flex items-center flex-col justify-center">
-                <span class="w-[60%] text-[#ccc] main-color text-[1.3rem] mt-8 text-center">天行健  君子以自强不息  地势坤  君子以厚德载物</span>
+                <span class="w-[60%] text-[#ccc] main-color text-[1.3rem] mt-5 text-center">天行健  君子以自强不息  地势坤  君子以厚德载物</span>
                 <span class="w-[80%] text-[#ccc] main-color text-[1.3rem] mt-2 text-center">业不可不勤  人不可不善  勤可以改变命运  善可以改变人生</span>
             </div>
         </div>
@@ -44,7 +43,7 @@ import { ref } from 'vue'
                 border: 1px solid rgba(26, 209, 165, .2);
                 content: '';
                 left: 0;
-                top: 0;
+                bottom: .63rem;
                 z-index: -1;
                 -webkit-transform: rotateX(20deg) rotateY(0deg);
                 transform: rotateX(20deg) rotateY(0deg);
