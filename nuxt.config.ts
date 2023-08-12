@@ -48,7 +48,7 @@ export default defineNuxtConfig({
         { name: 'cache-control', content: 'no-cache' },
         { name: 'x-dns-prefetch-control', content: 'on' },
         { name: 'og:type', content: 'website' },
-        { name: 'og:url', content: 'https://gaojianghua.cn/docs/' },
+        { name: 'og:url', content: 'https://docs.gaojianghua.cn' },
         { name: 'og:title', content: 'Wolffy-Document' },
         { name: 'og:image', content: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/%E7%81%B0%E5%A4%AA%E7%8B%BC.png' },
         {
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.ico' },
         { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
-        { rel: 'dns-prefetch', href: 'https://gaojianghua.cn' },
+        { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' },
       ],
     },
   },

@@ -11,11 +11,11 @@
 <template>
     <div class='page flex flex-col items-center fixed bottom-0 left-0 py-2'>
         <div class='urls flex'>
-            <a class='btnn box box-cd cursor-pointer' target="_blank" href="https://wolffy.gaojianghua.cn/home">Wolffy印记</a>
+            <a class='btnn box box-cd cursor-pointer' target="_blank" href="https://wolffy.gaojianghua.cn">Wolffy印记</a>
             <div class='px-2'/>
-            <a class="btnn box box-cd cursor-pointer" target="_blank" href="https://gaojianghua.cn/docs/">作者文档</a>
+            <a class="btnn box box-cd cursor-pointer" target="_blank" href="https://docs.gaojianghua.cn">作者文档</a>
             <div class='px-2'/>
-            <a class="btnn box box-cd cursor-pointer" target="_blank" href="#">服务官网</a>
+            <a class="btnn box box-cd cursor-pointer" target="_blank" href="https://gaojianghua.cn">服务官网</a>
         </div>
         <div class='text cursor-pointer mt-3'>邮箱：g598670138@163.com 个人微信号：woshigaojianghua</div>
         <a target="_blank" rel="noreferrer" href="https://beian.miit.gov.cn" class='text cursor-pointer mt-3'>Copyright ©
