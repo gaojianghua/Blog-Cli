@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      title: 'GAO BLOG',
+      title: 'Gao Blog',
       meta: [
         { name: 'description', content: '高江华的博客' },
         { name: 'author', content: '高江华, g598670138@163.com' },
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/logo.ico'},
         { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
         { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' },
       ],
