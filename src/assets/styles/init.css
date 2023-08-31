@@ -29,14 +29,16 @@ body {
     --main-color-rgb: rgb(26, 209, 165);
 }
 .main-color{
-    color: var(--main-color);
+    color: var(--main-color) !important;
 }
+
 .main{
     width: 100vw;
     height: 100vh;
     background: url("https://blog-cli.oss-cn-hangzhou.aliyuncs.com/kfidegf11wd.jpg");
     background-size: cover;
 }
+
 a{
     text-decoration: none !important;
 }
@@ -75,13 +77,12 @@ img{
 }
 
 *{
-    color: #f1f1f1;
+    /* color: #f1f1f1; */
     box-sizing: border-box !important;
 }
 
 .box{
     border: 1px solid rgba(26, 209, 165, .1);
-    -webkit-backdrop-filter: contrast(100%);
     background-color: rgba(255, 255, 255, .1);
     border-radius: .5rem;
 }

@@ -1,8 +1,8 @@
 /*
  * @Author       : 15257184434 g598670138@163.com
  * @Date         : 2023-01-15 09:13:13
- * @LastEditors  : 15257184434 g598670138@163.com
- * @LastEditTime : 2023-01-15 09:56:26
+ * @LastEditors: 高江华
+ * @LastEditTime: 2023-08-31 15:41:33
  * @FilePath     : \varlet-nuxt3-example\nuxt.config.ts
  * @Description  :
  *
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
     },
   },
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss', '@pinia-plugin-persistedstate/nuxt'],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
   css: ['~/assets/styles/init.css'],
   app: {
     head: {
@@ -60,8 +60,13 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/logo.ico'},
         { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
-        { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' },
+        { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' }
       ],
+      script: [
+        {
+          src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_8.a5d394bd36bf17d6e16630965d0278be.js'
+        }
+      ]
     },
   },
 })

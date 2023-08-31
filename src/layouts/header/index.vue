@@ -1,3 +1,10 @@
+<!--
+ * @Author: 高江华 g598670138@163.com
+ * @Date: 2023-08-04 18:00:23
+ * @LastEditors: 高江华
+ * @LastEditTime: 2023-08-31 16:13:34
+ * @Description: file content
+-->
 <template>
     <div class='page p-2'>
         <div class="page-title box px-[8.33rem] flex justify-between">
@@ -9,7 +16,7 @@
             </h1>
             <div class="flex leading-[5rem] text-[1.3rem] text-[#999]">
                 <div class="ml-12 text-cd cursor-pointer" :class="route.path == item.path ? 'main-color' : ''"
-                    v-for="(item, i) in menu" :key="i">
+                    v-for="(item, i) in menus" :key="i">
                     <NuxtLink class="py-6" :to="item.path">{{ item.name }}</NuxtLink>
                 </div>
                 <a class="ml-12 my-auto w-[3rem] h-[3rem]" href="https://github.com/gaojianghua" target="_blank">
@@ -41,34 +48,13 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import data from '@/data'
 
 const route = useRoute()
-
-let menu = ref([
-    {
-        name: '首页',
-        path: '/'
-    },
-    {
-        name: '文章',
-        path: '/article'
-    },
-    {
-        name: '游戏',
-        path: '/game'
-    },
-    {
-        name: '文稿',
-        path: '/draft'
-    },
-    {
-        name: '关于',
-        path: '/about'
-    }
-])
+const menus = ref(data.menus)
 
 const switchBack = () => {
-
+    navigateTo('/back/home')
 }
 </script>
 
