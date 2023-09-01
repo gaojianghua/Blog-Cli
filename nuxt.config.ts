@@ -64,7 +64,7 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_8.a5d394bd36bf17d6e16630965d0278be.js'
+          src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_11.961f67029185d625b7656c914468febb.js'
         }
       ]
     },

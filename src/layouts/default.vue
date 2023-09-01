@@ -11,7 +11,7 @@
             <BackMenu></BackMenu>
             <div class="flex-1 flex flex-col">
                 <BackNavbar></BackNavbar>
-                <div class="box ml-4 h-full mt-4">
+                <div class="box ml-4 h-full mt-4 p-4">
                     <slot />
                 </div>
             </div>

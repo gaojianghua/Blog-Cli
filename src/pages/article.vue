@@ -14,14 +14,14 @@
             <div v-else class="box box-cd flex cursor-pointer items-center justify-between mb-3 p-3"
                 v-for="(item, j) in list" :key="j" @click="openDetails(j)">
                 <div class="child-left w-[70%] flex-1 h-[8rem] flex flex-col justify-between">
-                    <div class="child-title text-[1.3rem] leading-none">
+                    <div class="child-title text-[1.3rem] text-white leading-none">
                         {{ item.title }}
                     </div>
                     <div class="child-desc text-[1.2rem] text-[#ccc] truncate">
                         {{ item.desc }}
                     </div>
                     <div class="tags flex items-center">
-                        <div class="box py-0.5 px-3 mr-3" v-for="(tag, i) in item.tags" :key="i">
+                        <div class="box py-0.5 px-3 text-white mr-3" v-for="(tag, i) in item.tags" :key="i">
                             {{ tag }}
                         </div>
                     </div>

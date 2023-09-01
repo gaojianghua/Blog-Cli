@@ -10,12 +10,15 @@ import { persist } from '@/utils'
 
 export const useCommonStore = defineStore("common", () => {
     const state = reactive({
+        backMenuSwitch: persist('backMenuSwitch', false)
     })
     return {
         state,
         getters: {},
         actions: {
-
+            setBackMenuSwitch(bool: boolean) {
+                state.backMenuSwitch = persist('backMenuSwitch', bool)
+            }
         }
     };
 })

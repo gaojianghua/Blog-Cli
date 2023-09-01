@@ -1,5 +1,7 @@
 <template>
-    <div class=''> </div>
+    <div class=' text-white'>
+        敬请期待
+    </div>
 </template>
 
 <script setup lang='ts'>
