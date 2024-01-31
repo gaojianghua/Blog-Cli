@@ -153,8 +153,56 @@ const list = [
     }
 ]
 
+const menus = [
+    {
+        name: '首页',
+        path: '/'
+    },
+    {
+        name: '文章',
+        path: '/article'
+    },
+    {
+        name: '游戏',
+        path: '/game'
+    },
+    {
+        name: '文稿',
+        path: '/draft'
+    },
+    {
+        name: '关于',
+        path: '/about'
+    }
+]
+
+const backMenus = [
+    {
+        name: '统计数据',
+        path: '/back/home',
+        icon: '#internal-data'
+    },
+    {
+        name: '文章管理',
+        path: '/back/article',
+        icon: '#document-folder'
+    },
+    {
+        name: '游戏管理',
+        path: '/back/game',
+        icon: '#game-two'
+    },
+    {
+        name: '文稿管理',
+        path: '/back/draft',
+        icon: '#inbox'
+    }
+]
+
 export default {
     articleMenus,
     gameMenus,
-    list
+    list,
+    menus,
+    backMenus
 }

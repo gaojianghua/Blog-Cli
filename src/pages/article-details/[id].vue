@@ -17,7 +17,7 @@
                     <div class="text-[#ffffff] text-center text-[1.3rem] font-medium tracking-wider">
                         相关文章
                     </div>
-                    <div class="box box-cd p-[3%] cursor-pointer mt-5 text-[1.2rem] flex flex-col" v-for="(item, i) in related" :key="i">
+                    <div class="box box-cd p-[3%] text-white cursor-pointer mt-5 text-[1.2rem] flex flex-col" v-for="(item, i) in related" :key="i">
                         <div>{{ item.title }}</div>
                         <div class="text-[#bbb] text-right mt-1 text-[1.1rem]">
                             {{ item.share + '分享' + ' · ' + item.collect + '收藏' }}
@@ -29,7 +29,7 @@
                         推荐文章
                     </div>
                     <div class="box box-cd p-[3%] cursor-pointer mt-5 text-[1.2rem] flex flex-col" v-for="(item, i) in related" :key="i">
-                        <div>{{ item.title }}</div>
+                        <div class="text-white">{{ item.title }}</div>
                         <div class="text-[#bbb] text-right mt-1 text-[1.1rem]">
                             {{ item.share + '分享' + ' · ' + item.collect + '收藏' }}
                         </div>

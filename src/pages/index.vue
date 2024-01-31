@@ -28,7 +28,7 @@
             </div>
             <div class="flex flex-col items-center justify-center h-full w-4/12 ml-auto mb-[1rem]">
                 <div class="w-[15rem] h-[15rem] flex items-center justify-center rounded-full overflow-hidden border-[0.3rem] border-[#fff]">
-                    <img class="w-[15rem] h-[15rem] max-w-none" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png" alt="作者头像">
+                    <img class="w-[16rem] h-[16rem] max-w-none" src="https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/home/wolffy.png" alt="作者头像">
                 </div>
                 <div class="text-[#dddddd] mt-7">
                     <h1 class="text-[3rem] tracking-wider">你好👋</h1>
@@ -145,9 +145,6 @@ const openURL = (src: string) => {
     height: calc(100vh - 5rem - 0.5rem - 10rem);
 
     .list {
-        .item {
-
-        }
 
         .item:nth-child(1) {
             margin-top: 0;

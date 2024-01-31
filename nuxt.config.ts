@@ -1,8 +1,8 @@
 /*
  * @Author       : 15257184434 g598670138@163.com
  * @Date         : 2023-01-15 09:13:13
- * @LastEditors  : 15257184434 g598670138@163.com
- * @LastEditTime : 2023-01-15 09:56:26
+ * @LastEditors: 高江华
+ * @LastEditTime: 2023-08-31 15:41:33
  * @FilePath     : \varlet-nuxt3-example\nuxt.config.ts
  * @Description  :
  *
@@ -26,12 +26,12 @@ export default defineNuxtConfig({
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
     },
   },
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss', '@pinia-plugin-persistedstate/nuxt'],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
   css: ['~/assets/styles/init.css'],
   app: {
     head: {
       charset: 'utf-8',
-      title: 'GAO BLOG',
+      title: 'Gao Blog',
       meta: [
         { name: 'description', content: '高江华的博客' },
         { name: 'author', content: '高江华, g598670138@163.com' },
@@ -58,10 +58,15 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/gaojianghua.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/logo.ico'},
         { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
-        { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' },
+        { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' }
       ],
+      script: [
+        {
+          src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_11.961f67029185d625b7656c914468febb.js'
+        }
+      ]
     },
   },
 })
