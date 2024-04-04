@@ -53,7 +53,7 @@
                         我是一名全栈开发者，历经 {{ year }} 年开发历程。
                     </div>
                     <div class="indent-[2em] text-[1.5rem] leading-[2.5rem] tracking-wider">
-                        掌握 Vue系列 React系列 UniApp系列 Flutter Electron Gin GRPC Nest Mysql Redis Docker Nginx Shell
+                        掌握 Vue系列 React系列 UniApp系列 Dart Flutter ArkTs Electron Gin GRPC Nest Mysql Redis Docker Nginx Shell
                         等等前后端及运维技术能力。
                     </div>
                     <div class="mt-5 text-right text-[1.5rem] tracking-wider">灰太狼 & 社区第一菜狗</div>
@@ -87,50 +87,50 @@ const project = ref([
     {
         name: 'Official-Document',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/wolffyPink.png',
-        desc: '一个导航站平台，可自定义印记卡片和导航链接。',
+        desc: '一个导航站平台，可自定义印记卡片和导航链接。采用Next，AntD，MBox，Axios开发。使用Rsa，Aes进行加密处理。',
         github: 'https://github.com/gaojianghua/Official-Document',
         url: 'https://wolffy.gaojianghua.cn/home',
         tags: ['NextJs', 'TypeScript', 'Axios']
     },
     {
-        name: 'UniApp-TMP',
-        logo: 'https://gongyue-shop.oss-cn-hangzhou.aliyuncs.com/GongYueLogo.png',
-        desc: 'UniApp骨架模板，集成实际业务中所需的各种封装工具。使开发者快速上手开发或项目二开。',
-        github: 'https://github.com/gaojianghua/UniApp-TMP',
-        url: 'https://github.com/gaojianghua/UniApp-TMP',
-        tags: ['UniApp', 'Uview UI', 'Vuex']
-    },
-    {
         name: 'Technical-Site',
         logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/logo.png',
-        desc: '个人技术文档, 积累记录学习笔记。',
+        desc: '个人技术文档, 记录学习笔记。包含Vue，React，UniApp，Nest，Go，Mysql，Redis，Vite，Git，Linux，Shell，Docker等等前后端运维技术。',
         github: 'https://github.com/gaojianghua/Technical-Site',
         url: 'https://gaojianghua.cn/docs/',
         tags: ['VitePress']
     },
     {
-        name: 'Vue-B-TMP',
-        logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
-        desc: 'Vue3版本-后台管理系统模板',
-        github: 'https://github.com/gaojianghua/Vue-B-TMP',
-        url: 'https://github.com/gaojianghua/Vue-B-TMP',
-        tags: ['Vue', 'Element-Plus', 'Axios']
+        name: 'Blog-Cli',
+        logo: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/logo.png',
+        desc: '个人博客客户端，采用Nuxt，Tailwind，Element-Plus，Axios技术开发。收录各类技术文章，生活小常识，休闲小游戏等等。',
+        github: 'https://github.com/gaojianghua/Blog-Cli',
+        url: 'https://github.com/gaojianghua/Blog-Cli',
+        tags: ['Nuxt', 'Tailwind-Css', 'Element-Plus', 'Axios']
     },
     {
-        name: 'Vue-C-TMP',
-        logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
-        desc: 'Vue3版本-C端响应式模板',
-        github: 'https://github.com/gaojianghua/Vue-C-TMP',
-        url: 'https://github.com/gaojianghua/Vue-C-TMP',
-        tags: ['Vue', 'Element-Plus', 'Axios']
+        name: 'Flutter-TMP',
+        logo: 'https://flutter-tmp.oss-cn-hangzhou.aliyuncs.com/flutter-tmp.png',
+        desc: 'Flutter骨架模板：配置了国际化，请求封装，常用组件封装，Getx状态及路由管理等等工具，帮助开发者快速进入业务开发。',
+        github: 'https://github.com/gaojianghua/Flutter-TMP',
+        url: 'https://github.com/gaojianghua/Flutter-TMP',
+        tags: ['Dart', 'Flutter', 'Getx']
     },
     {
-        name: 'Electron-Vue-TMP',
-        logo: 'https://gaojianghua.oss-cn-hangzhou.aliyuncs.com/weChatLogo.png',
-        desc: '基于Vue3与Electron的桌面端应用模板',
-        github: 'https://github.com/gaojianghua/Electron-Vue-TMP',
-        url: 'https://github.com/gaojianghua/Electron-Vue-TMP',
-        tags: ['Vue', 'Element-Plus', 'Axios']
+        name: 'UniApp-TMP',
+        logo: 'https://gongyue-shop.oss-cn-hangzhou.aliyuncs.com/uniapp.png',
+        desc: 'UniApp骨架模板：集成实际业务中所需的各种封装工具，封装常用组件。使开发者快速上手开发或项目二开。',
+        github: 'https://github.com/gaojianghua/UniApp-TMP',
+        url: 'https://github.com/gaojianghua/UniApp-TMP',
+        tags: ['UniApp', 'Uview UI', 'Vuex']
+    },
+    {
+        name: 'UniApp-X-TMP',
+        logo: 'https://gongyue-shop.oss-cn-hangzhou.aliyuncs.com/uniappx.png',
+        desc: 'UniApp-X骨架模板：集成实际业务中所需的各种封装工具，封装常用组件。使开发者快速上手开发或项目二开。',
+        github: 'https://github.com/gaojianghua/UniApp-X-TMP',
+        url: 'https://github.com/gaojianghua/UniApp-X-TMP',
+        tags: ['UniApp-X', 'UTS']
     }
 ]);
 
