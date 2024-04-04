@@ -1,12 +1,9 @@
 <template>
-    <div class=''> </div>
+    <div class="" />
 </template>
 
-<script setup lang='ts'>
-import { ref } from 'vue'
-
+<script setup lang="ts">
+import { ref } from 'vue';
 </script>
 
-<style lang='scss' scoped>
-
-</style>
+<style lang="scss" scoped></style>

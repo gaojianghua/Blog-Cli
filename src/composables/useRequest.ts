@@ -1,9 +1,9 @@
-import {NuxtApp, UseFetchOptions} from "nuxt/app";
+import { NuxtApp, UseFetchOptions } from 'nuxt/app';
 
 export enum ResultEnum {
     SUCCESS = 200,
     TOKEN_OVERDUE = 20001, // 用户登录失败
-    INTERNAL_SERVER_ERROR = 500, // 服务异常
+    INTERNAL_SERVER_ERROR = 500 // 服务异常
 }
 
 interface DefaultResult<T = any> {
@@ -26,13 +26,9 @@ interface RequestConfig<T = any> extends HttpOption<T> {
     ignoreGlobalErrorMessage?: boolean;
 }
 
-const request = async <T>(
-    url: UrlType,
-    params: any,
-    options: RequestConfig<T>
-): Promise<DefaultResult<T> | T> => {
-    const headers = useRequestHeaders(["cookie"]);
-    const method = ((options?.method || "GET") as string).toUpperCase();
+const request = async <T>(url: UrlType, params: any, options: RequestConfig<T>): Promise<DefaultResult<T> | T> => {
+    const headers = useRequestHeaders(['cookie']);
+    const method = ((options?.method || 'GET') as string).toUpperCase();
     const runtimeConfig = useRuntimeConfig();
     const nuxtApp = useNuxtApp();
     const { $message, $login } = nuxtApp;
@@ -46,7 +42,7 @@ const request = async <T>(
     };
 
     // 处理报错异常
-    const handlerError = (msg = "服务异常") => {
+    const handlerError = (msg = '服务异常') => {
         if (process.server) {
             showError({ message: msg, statusCode: 500 });
         } else {
@@ -57,21 +53,19 @@ const request = async <T>(
     const { data, error } = await useFetch(url, {
         baseURL,
         headers,
-        credentials: "include",
-        params: method === "GET" ? params : undefined,
-        body: method === "POST" ? JSON.stringify(params) : undefined,
+        credentials: 'include',
+        params: method === 'GET' ? params : undefined,
+        body: method === 'POST' ? JSON.stringify(params) : undefined,
         ...options,
         onRequest({ request, options }) {
             // 设置请求报头
-            options.headers = options.headers || {}
-            /**如果接口需求携带token请求，则可先自行使用官方的useCookie()方法设置Cookie存储后，再使用useCookie()方法，取出token使用。如下例子：*/
-            //const token = useCookie('token')
-            //@ts-ignore
-            //options.headers.Authorization = token.value||null
+            options.headers = options.headers || {};
+            /** 如果接口需求携带token请求，则可先自行使用官方的useCookie()方法设置Cookie存储后，再使用useCookie()方法，取出token使用。如下例子： */
+            // const token = useCookie('token')
+            // options.headers.Authorization = token.value||null
         },
         onRequestError({ request, options, error }) {
             // 处理请求错误
-            console.log("服务器链接失败!")
         },
         onResponse({ request, response, options }) {
             // 处理响应数据
@@ -86,7 +80,7 @@ const request = async <T>(
 
     if (error.value || !responseData) {
         if (!ignoreGlobalErrorMessage) handlerError();
-        return Promise.reject(error.value || "服务响应失败，请稍后重试");
+        return Promise.reject(error.value || '服务响应失败，请稍后重试');
     } else {
         const { code, data: result, msg } = responseData;
         // 接口请求成功，直接返回结果
@@ -96,13 +90,13 @@ const request = async <T>(
         if (!ignoreCatch) {
             // 接口请求错误，统一处理
             switch (code) {
-                case ResultEnum.TOKEN_OVERDUE: // 登录信息过期，去登录
-                    // 用户信息过期
-                    await handlerTokenOverdue();
-                    break;
-                default:
-                    if (!ignoreGlobalErrorMessage) handlerError(msg);
-                    return Promise.reject(msg || "服务响应失败，请稍后重试");
+            case ResultEnum.TOKEN_OVERDUE: // 登录信息过期，去登录
+                // 用户信息过期
+                await handlerTokenOverdue();
+                break;
+            default:
+                if (!ignoreGlobalErrorMessage) handlerError(msg);
+                return Promise.reject(msg || '服务响应失败，请稍后重试');
             }
         }
     }
@@ -112,15 +106,15 @@ const request = async <T>(
 // 自动导出
 export const useRequest = {
     get: <T>(url: UrlType, params?: any, option?: RequestConfig<T>) => {
-        return request<T>(url, params, { method: "get", ...option });
+        return request<T>(url, params, { method: 'get', ...option });
     },
     post: <T>(url: UrlType, params?: any, option?: RequestConfig<T>) => {
-        return request<T>(url, params, { method: "post", ...option });
+        return request<T>(url, params, { method: 'post', ...option });
     },
     put: <T>(url: UrlType, params?: any, option?: RequestConfig<T>) => {
-        return request<T>(url, params, { method: "put", ...option });
+        return request<T>(url, params, { method: 'put', ...option });
     },
     remove: <T>(url: UrlType, params?: any, option?: RequestConfig<T>) => {
-        return request<T>(url, params, { method: "delete", ...option });
-    },
+        return request<T>(url, params, { method: 'delete', ...option });
+    }
 };

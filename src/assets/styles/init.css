@@ -25,21 +25,21 @@ select {
 html,
 body {
     font-size: 12px;
-    --main-color: #1AD1A5;
+    --main-color: #1ad1a5;
     --main-color-rgb: rgb(26, 209, 165);
 }
-.main-color{
+.main-color {
     color: var(--main-color) !important;
 }
 
-.main{
+.main {
     width: 100vw;
     height: 100vh;
-    background: url("https://blog-cli.oss-cn-hangzhou.aliyuncs.com/kfidegf11wd.jpg");
+    background: url('https://blog-cli.oss-cn-hangzhou.aliyuncs.com/kfidegf11wd.jpg');
     background-size: cover;
 }
 
-a{
+a {
     text-decoration: none !important;
 }
 
@@ -71,25 +71,25 @@ button {
     border-radius: 0;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
 }
 
-*{
+* {
     /* color: #f1f1f1; */
     box-sizing: border-box !important;
 }
 
-.box{
-    border: 1px solid rgba(26, 209, 165, .1);
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: .5rem;
+.box {
+    border: 1px solid rgba(26, 209, 165, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
 }
-.box-cd:hover{
-    border: 1px solid rgba(26, 209, 165, .8);
-    background-color: rgba(255, 255, 255, .2);
+.box-cd:hover {
+    border: 1px solid rgba(26, 209, 165, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
 }
-.text-cd:hover{
+.text-cd:hover {
     color: var(--main-color);
 }

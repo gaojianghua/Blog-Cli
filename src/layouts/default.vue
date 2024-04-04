@@ -8,10 +8,10 @@
 <template>
     <div class="main" :class="switchBack ? 'flex p-4' : ''">
         <template v-if="switchBack">
-            <BackMenu></BackMenu>
-            <div class="flex-1 flex flex-col">
-                <BackNavbar></BackNavbar>
-                <div class="box ml-4 h-full mt-4 p-4">
+            <BackMenu />
+            <div class="flex flex-1 flex-col">
+                <BackNavbar />
+                <div class="box ml-4 mt-4 h-full p-4">
                     <slot />
                 </div>
             </div>
@@ -24,28 +24,32 @@
     </div>
 </template>
 
-<script setup lang='ts'>
-import AppHeader from './header/index.vue'
-import AppFooter from './footer/index.vue'
-import BackMenu from './backMenu/index.vue'
-import BackNavbar from './backNavbar/index.vue'
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import AppHeader from './header/index.vue';
+import AppFooter from './footer/index.vue';
+import BackMenu from './backMenu/index.vue';
+import BackNavbar from './backNavbar/index.vue';
 
-let isHome = ref(false)
-let switchBack = ref(false)
-const route = useRoute()
+const isHome = ref(false);
+const switchBack = ref(false);
+const route = useRoute();
 
-watch(() => route.path, (newX) => {
-    if (newX == '/') {
-        isHome.value = true
-    } else {
-        isHome.value = false
-    }
-    if (newX.indexOf('back') == -1) {
-        switchBack.value = false
-    } else {
-        switchBack.value = true
-    }
-}, { immediate: true })
+watch(
+    () => route.path,
+    newX => {
+        if (newX == '/') {
+            isHome.value = true;
+        } else {
+            isHome.value = false;
+        }
+        if (!newX.includes('back')) {
+            switchBack.value = false;
+        } else {
+            switchBack.value = true;
+        }
+    },
+    { immediate: true }
+);
 </script>

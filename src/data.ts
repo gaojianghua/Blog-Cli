@@ -27,7 +27,7 @@ const articleMenus = [
         name: '其他',
         type: 6
     }
-]
+];
 
 const gameMenus = [
     {
@@ -58,100 +58,60 @@ const gameMenus = [
         name: '格斗战',
         type: 6
     }
-]
+];
 
 const list = [
     {
         title: 'Vue技术揭秘之watch监听器',
         desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'React技术揭秘之useEffect',
         desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'Vue技术揭秘之watch监听器',
         desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'React技术揭秘之useEffect',
         desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'Vue技术揭秘之watch监听器',
         desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'React技术揭秘之useEffect',
         desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'Vue技术揭秘之watch监听器',
         desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'React技术揭秘之useEffect',
         desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'Vue技术揭秘之watch监听器',
         desc: 'watch监听器是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     },
     {
         title: 'React技术揭秘之useEffect',
         desc: 'useEffect是我们平时工作中经常用到的，我们来细说下它的使用以及应该场景。useEffect是函数组件中替代过去类组件中的生命周期钩子的方案。',
-        tags: [
-            '前端',
-            'Vue',
-            '监听器'
-        ]
+        tags: ['前端', 'Vue', '监听器']
     }
-]
+];
 
 const menus = [
     {
@@ -174,7 +134,7 @@ const menus = [
         name: '关于',
         path: '/about'
     }
-]
+];
 
 const backMenus = [
     {
@@ -197,7 +157,7 @@ const backMenus = [
         path: '/back/draft',
         icon: '#inbox'
     }
-]
+];
 
 export default {
     articleMenus,
@@ -205,4 +165,4 @@ export default {
     list,
     menus,
     backMenus
-}
+};

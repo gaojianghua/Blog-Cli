@@ -5,20 +5,20 @@
  * @LastEditTime: 2023-08-31 16:03:01
  * @Description: file content
  */
-import { defineStore } from "pinia";
-import { persist } from '@/utils'
+import { defineStore } from 'pinia';
+import { persist } from '@/utils';
 
-export const useCommonStore = defineStore("common", () => {
+export const useCommonStore = defineStore('common', () => {
     const state = reactive({
         backMenuSwitch: persist('backMenuSwitch', false)
-    })
+    });
     return {
         state,
         getters: {},
         actions: {
             setBackMenuSwitch(bool: boolean) {
-                state.backMenuSwitch = persist('backMenuSwitch', bool)
+                state.backMenuSwitch = persist('backMenuSwitch', bool);
             }
         }
     };
-})
+});

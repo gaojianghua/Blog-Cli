@@ -5,6 +5,6 @@
  * @LastEditTime: 2023-08-31 12:59:51
  * @Description: file content
  */
-import stores from "@/store"
+import stores from '@/store';
 
-export const useStore = stores
+export const useStore = stores;

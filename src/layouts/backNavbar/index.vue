@@ -6,110 +6,115 @@
  * @Description: file content
 -->
 <template>
-    <div class='box h-[6.2rem] flex items-center ml-4 px-4'>
-        <button class="menuBun h-[3.5rem] w-[3.5rem] box flex items-center justify-center"
-            :class="common.state.backMenuSwitch ? 'unflod' : ''" @click="switchMenuBox">
-            <svg class="iconpark-icon w-[2.5rem] h-[2.5rem] main-color">
-                <use :href="common.state.backMenuSwitch ? '#menu-fold-one' : '#menu-unfold-one'"></use>
+    <div class="box ml-4 flex h-[6.2rem] items-center px-4">
+        <button
+            class="menuBun box flex h-[3.5rem] w-[3.5rem] items-center justify-center"
+            :class="common.state.backMenuSwitch ? 'unflod' : ''"
+            @click="switchMenuBox"
+        >
+            <svg class="iconpark-icon main-color h-[2.5rem] w-[2.5rem]">
+                <use :href="common.state.backMenuSwitch ? '#menu-fold-one' : '#menu-unfold-one'" />
             </svg>
         </button>
-        <button class="h-[3.5rem] w-[3.5rem] ml-[1rem] box flex items-center justify-center" @click="refresh">
-            <svg class="iconpark-icon w-[2.5rem] h-[2.5rem] main-color" :class="rotate ? 'rotate' : ''">
-                <use href="#refresh"></use>
+        <button class="box ml-[1rem] flex h-[3.5rem] w-[3.5rem] items-center justify-center" @click="refresh">
+            <svg class="iconpark-icon main-color h-[2.5rem] w-[2.5rem]" :class="rotate ? 'rotate' : ''">
+                <use href="#refresh" />
             </svg>
         </button>
-        <button class="h-[3.5rem] w-[3.5rem] ml-[1rem] box flex items-center justify-center" @click="setScreenStatus">
-            <svg class="iconpark-icon w-[2.5rem] h-[2.5rem] main-color">
-                <use :href="screenStatus ? '#off-screen-one' : '#full-screen-one'"></use>
+        <button class="box ml-[1rem] flex h-[3.5rem] w-[3.5rem] items-center justify-center" @click="setScreenStatus">
+            <svg class="iconpark-icon main-color h-[2.5rem] w-[2.5rem]">
+                <use :href="screenStatus ? '#off-screen-one' : '#full-screen-one'" />
             </svg>
         </button>
-        <button class="h-[3.5rem] w-[3.5rem] ml-auto box flex items-center justify-center" @click="setting">
-            <svg class="iconpark-icon w-[2.5rem] h-[2.5rem] main-color">
-                <use href="#setting-two"></use>
+        <button class="box ml-auto flex h-[3.5rem] w-[3.5rem] items-center justify-center" @click="setting">
+            <svg class="iconpark-icon main-color h-[2.5rem] w-[2.5rem]">
+                <use href="#setting-two" />
             </svg>
         </button>
-        <button class="h-[3.5rem] w-[3.5rem] ml-[1rem] box flex items-center justify-center" @click="close">
-            <svg class="iconpark-icon w-[2.5rem] h-[2.5rem] main-color">
-                <use href="#power"></use>
+        <button class="box ml-[1rem] flex h-[3.5rem] w-[3.5rem] items-center justify-center" @click="close">
+            <svg class="iconpark-icon main-color h-[2.5rem] w-[2.5rem]">
+                <use href="#power" />
             </svg>
         </button>
     </div>
 </template>
 
-<script setup lang='ts'>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue';
 
-const common = useStore.useCommonStore()
-let screenStatus = ref(false)
-let rotate = ref(false)
+const common = useStore.useCommonStore();
+const screenStatus = ref(false);
+const rotate = ref(false);
 
 const switchMenuBox = () => {
-    common.actions.setBackMenuSwitch(!common.state.backMenuSwitch)
-}
+    common.actions.setBackMenuSwitch(!common.state.backMenuSwitch);
+};
 
 const close = () => {
-    navigateTo('/')
-}
+    navigateTo('/');
+};
 
 const setScreenStatus = () => {
     if (screenStatus.value) {
         if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if ((document as any).mozCancelFullScreen) { /* Firefox */
+        } else if ((document as any).mozCancelFullScreen) {
+            /* Firefox */
             (document as any).mozCancelFullScreen();
-        } else if ((document as any).webkitExitFullscreen) { /* Chrome, Safari and Opera */
+        } else if ((document as any).webkitExitFullscreen) {
+            /* Chrome, Safari and Opera */
             (document as any).webkitExitFullscreen();
-        } else if ((document as any).msExitFullscreen) { /* IE/Edge */
+        } else if ((document as any).msExitFullscreen) {
+            /* IE/Edge */
             (document as any).msExitFullscreen();
         }
-    } else {
-        if (document.documentElement.requestFullscreen) {
-            document.documentElement.requestFullscreen();
-        } else if ((document.documentElement as any).mozRequestFullScreen) { /* Firefox */
-            (document.documentElement as any).mozRequestFullScreen();
-        } else if ((document.documentElement as any).webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-            (document.documentElement as any).webkitRequestFullscreen();
-        } else if ((document.documentElement as any).msRequestFullscreen) { /* IE/Edge */
-            (document.documentElement as any).msRequestFullscreen();
-        }
+    } else if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+    } else if ((document.documentElement as any).mozRequestFullScreen) {
+        /* Firefox */
+        (document.documentElement as any).mozRequestFullScreen();
+    } else if ((document.documentElement as any).webkitRequestFullscreen) {
+        /* Chrome, Safari and Opera */
+        (document.documentElement as any).webkitRequestFullscreen();
+    } else if ((document.documentElement as any).msRequestFullscreen) {
+        /* IE/Edge */
+        (document.documentElement as any).msRequestFullscreen();
     }
-    screenStatus.value = !screenStatus.value
-}
+    screenStatus.value = !screenStatus.value;
+};
 
-const setting = () => {
-
-}
+const setting = () => {};
 
 const refresh = () => {
-    rotate.value = true
+    rotate.value = true;
     // 刷新逻辑
-    let time = setTimeout(() => {
-        rotate.value = false
-        clearTimeout(time)
+    const time = setTimeout(() => {
+        rotate.value = false;
+        clearTimeout(time);
     }, 1500);
-}
+};
 </script>
 
-<style lang='scss' scoped>
-.menuBun {
-    transition: all 0.2s linear;
-}
+<style lang="scss" scoped>
+    .menuBun {
+        transition: all 0.2s linear;
+    }
 
-.rotate {
-    animation: rotate 1.2s linear;
+    .rotate {
+        animation: rotate 1.2s linear;
 
-    @keyframes rotate {
-        to {
-            transform: rotate(0);
-        }
+        @keyframes rotate {
+            to {
+                transform: rotate(0);
+            }
 
-        from {
-            transform: rotate(-720deg);
+            from {
+                transform: rotate(-720deg);
+            }
         }
     }
-}
 
-.unflod {
-    transform: rotate(45deg);
-}
+    .unflod {
+        transform: rotate(45deg);
+    }
 </style>

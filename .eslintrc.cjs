@@ -1,42 +1,55 @@
-process.env.ESLINT_TSCONFIG = 'tsconfig.json'
+// .eslintrc.js
+
+process.env.ESLINT_TSCONFIG = 'tsconfig.json';
+
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2022: true
     },
     extends: [
         'plugin:prettier/recommended',
-        'plugin:vue/vue3-recommended',
+        'plugin:vue/recommended', // Changed to support Vue 2 and Vue 3
         'plugin:@typescript-eslint/recommended',
         'plugin:nuxt/recommended',
-        "plugin:tailwindcss/recommended",
-        "@antfu"
+        'plugin:tailwindcss/recommended'
     ],
     parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2023, // Updated ECMAScript version
         parser: '@typescript-eslint/parser',
         sourceType: 'module'
     },
     plugins: ['@typescript-eslint', 'tailwindcss'],
     rules: {
-        'vue/multi-word-component-names': 0, //关闭vue文件和组件命名校验
+        indent: ['error', 4],
+        '@typescript-eslint/no-unused-vars': 'off',
+        'tailwindcss/no-custom-classname': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        'vue/multi-word-component-names': 0,
         'vue/singleline-html-element-content-newline': 'off',
         'vue/multiline-html-element-content-newline': 'off',
         'vue/max-attributes-per-line': 0,
-        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-        'prettier/prettier': [
+        'no-console': 'off',
+        'no-debugger': 'off',
+        // Remove conflicting rules with Prettier
+        'prettier/prettier': 'off',
+        'vue/html-indent': [
             'error',
+            4,
             {
-                printWidth: 140, //代码单行长度
-                tabWidth: 4, //tab键缩进为2空格
-                useTabs: false, //使用空格缩进
-                singleQuote: true, //js单引号
-                semi: false, //去分号
-                // trailingComma: 'none', //无尾逗号
-                arrowParens: 'avoid', //箭头函数尽可能省略括号
-                jsxBracketSameLine: true //标签换行后>单独一行
+                attribute: 1,
+                baseIndent: 1,
+                closeBracket: 0,
+                alignAttributesVertically: true,
+                ignores: []
             }
         ]
+    },
+    settings: {
+        tailwindcss: {
+            includeLanguages: ['html', 'vue', 'js', 'jsx', 'tsx'] // Specify which file types Tailwind CSS should be checked against
+        }
     }
-}
+};

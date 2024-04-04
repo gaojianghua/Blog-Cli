@@ -30,9 +30,9 @@ module.exports = {
                 'wip',
                 'workflow',
                 'types',
-                'release',
-            ],
-        ],
+                'release'
+            ]
+        ]
     },
     prompt: {
         messages: {
@@ -56,7 +56,7 @@ module.exports = {
             footerPrefixsSelect: '选择关联issue前缀（可选）:',
             customFooterPrefixs: '输入自定义issue前缀 :',
             footer: '列举关联issue (可选) 例如: #31, #I3244 :\n',
-            confirmCommit: '是否提交或修改commit ?',
+            confirmCommit: '是否提交或修改commit ?'
         },
         types: [
             // 英文
@@ -91,10 +91,18 @@ module.exports = {
             { value: 'refactor', name: 'refactor:   ♻️  代码重构（不包括 bug 修复、功能新增）', emoji: '♻️' },
             { value: 'perf', name: 'perf:      ⚡️  性能优化', emoji: '⚡️' },
             { value: 'test', name: 'test:       ✅  添加疏漏测试或已有测试改动', emoji: '✅' },
-            { value: 'build', name: 'build:      📦️  构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）', emoji: '📦️' },
+            {
+                value: 'build',
+                name: 'build:      📦️  构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）',
+                emoji: '📦️'
+            },
             { value: 'ci', name: 'ci:         🎡  修改 CI 配置、脚本', emoji: '🎡' },
             { value: 'revert', name: 'revert:     ⏪️  回滚 commit', emoji: '⏪️' },
-            { value: 'chore', name: 'chore:      🔨  对构建过程或辅助工具和库的更改（不影响源文件、测试用例）', emoji: '🔨' },
+            {
+                value: 'chore',
+                name: 'chore:      🔨  对构建过程或辅助工具和库的更改（不影响源文件、测试用例）',
+                emoji: '🔨'
+            }
         ],
         useEmoji: true,
         themeColorCode: '',
@@ -123,6 +131,6 @@ module.exports = {
         defaultBody: '',
         defaultIssues: '',
         defaultScope: '',
-        defaultSubject: '',
-    },
-}
+        defaultSubject: ''
+    }
+};

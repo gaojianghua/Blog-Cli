@@ -8,13 +8,13 @@
  *
  * Copyright (c) 2023 by 15257184434 g598670138@163.com, All Rights Reserved.
  */
-import { useUserStore } from "./useUserStore"
-import { useCommonStore } from "./useCommonStore"
+import { useUserStore } from './useUserStore';
+import { useCommonStore } from './useCommonStore';
 
-//模块
+// 模块
 const stores = {
     useUserStore,
     useCommonStore
-}
+};
 
-export default stores
+export default stores;

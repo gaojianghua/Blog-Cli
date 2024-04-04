@@ -5,7 +5,7 @@ module.exports = {
             viewportWidth: 375,
             unitPrecision: 6,
             unitToConvert: 'px',
-            propList: ['*'],
+            propList: ['*']
         }
     }
-}
+};
