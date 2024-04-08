@@ -67,12 +67,14 @@ export default defineNuxtConfig({
             link: [
                 { rel: 'icon', type: 'image/svg+xml', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com/logo.ico' },
                 { rel: 'dns-prefetch', href: 'https://blog-cli.oss-cn-hangzhou.aliyuncs.com' },
-                { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' }
+                { rel: 'dns-prefetch', href: 'https://docs.gaojianghua.cn' },
+                { rel: 'stylesheet', href: 'https://unpkg.com/cesium@1.116/Build/Cesium/Widgets/widgets.css' }
             ],
             script: [
                 {
                     src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_11.961f67029185d625b7656c914468febb.js'
-                }
+                },
+                { src: 'https://unpkg.com/cesium@1.116/Build/Cesium/Cesium.js', defer: true }
             ]
         }
     }

@@ -123,6 +123,10 @@ const menus = [
         path: '/article'
     },
     {
+        name: '作品',
+        path: '/works'
+    },
+    {
         name: '游戏',
         path: '/game'
     },
@@ -159,10 +163,29 @@ const backMenus = [
     }
 ];
 
+const worksMenus = [
+    {
+        name: 'Three',
+        type: 0
+    },
+    {
+        name: 'Cesium',
+        type: 1
+    },
+    {
+        name: 'Charts',
+        type: 2
+    }
+]
+
+const defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwNjZhYTIxZC0zOGRmLTQxZDUtYjY3YS05MWNmYTViOGQxNTYiLCJpZCI6MjA3MjIzLCJpYXQiOjE3MTI1NDU3ODJ9.x3KnX-97CZIytvhOgG5Ox5TopzNUb_qH4_6VSwpLUA4'
+
 export default {
     articleMenus,
     gameMenus,
     list,
     menus,
-    backMenus
+    backMenus,
+    worksMenus,
+    defaultAccessToken
 };

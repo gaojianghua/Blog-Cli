@@ -35,6 +35,7 @@ module.exports = {
         'no-debugger': 'off',
         // Remove conflicting rules with Prettier
         'prettier/prettier': 'off',
+        'rule-name': 'off',
         'vue/html-indent': [
             'error',
             4,
