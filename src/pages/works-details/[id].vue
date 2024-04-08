@@ -11,7 +11,7 @@ import { ref } from 'vue'
 import data from '@/data';
 const cesiumContainer = ref<HTMLDivElement>()
 if (process.client) {
-    window.CESIUM_BASE_URL = 'https://unpkg.com/cesium@1.116/Build/Cesium/';
+    window.CESIUM_BASE_URL = 'https://unpkg.com/cesium/Build/Cesium/';
 }
 
 let viewer: any
