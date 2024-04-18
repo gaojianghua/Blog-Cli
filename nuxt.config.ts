@@ -2,7 +2,7 @@
  * @Author       : 15257184434 g598670138@163.com
  * @Date         : 2023-01-15 09:13:13
  * @LastEditors: 高江华
- * @LastEditTime: 2023-08-31 15:41:33
+ * @LastEditTime: 2024-04-18 17:05:23
  * @FilePath     : \varlet-nuxt3-example\nuxt.config.ts
  * @Description  :
  *
@@ -75,7 +75,8 @@ export default defineNuxtConfig({
                     src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_11.961f67029185d625b7656c914468febb.js'
                 },
                 { src: 'https://unpkg.com/cesium/Build/Cesium/Cesium.js', defer: true },
-                { src: 'https://cdn.jsdelivr.net/npm/three/build/three.min.js', defer: true }
+                { src: 'https://cdn.jsdelivr.net/npm/three/build/three.min.js', defer: true },
+                { src: 'https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js', defer: true }
             ]
         }
     }

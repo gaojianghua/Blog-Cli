@@ -1,43 +1,33 @@
+<!--
+ * @Author: 高江华 g598670138@163.com
+ * @Date: 2024-04-08 10:30:40
+ * @LastEditors: 高江华
+ * @LastEditTime: 2024-04-18 14:54:32
+ * @Description: file content
+-->
 <template>
     <div class="page mx-auto flex w-[100rem]">
         <div class="box h-full flex-1 p-[0.5rem]">
-            <div id="cesiumContainer" ref="cesiumContainer" class="h-full" />
+            <template v-if="routeParams.id == '0'">
+                <cesium-one />
+            </template>
+            <template v-if="routeParams.id == '1'">
+                <three-one />
+            </template>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import data from '@/data';
-const cesiumContainer = ref<HTMLDivElement>()
-if (process.client) {
-    window.CESIUM_BASE_URL = 'https://unpkg.com/cesium/Build/Cesium/';
-}
+import { useRoute } from 'vue-router';
+import CesiumOne from '@/components/works/cesium-one.vue'
+import ThreeOne from '@/components/works/three-one.vue'
+const route = useRoute();
+const routeParams = route.params;
+console.log(routeParams);
 
-let viewer: any
 
-onMounted(() => {
-    Cesium.Ion.defaultAccessToken = data.defaultAccessToken;
-
-    // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
-    viewer = new Cesium.Viewer("cesiumContainer", {
-        baseLayer: Cesium.ImageryLayer.fromWorldImagery({
-            
-        }),
-        baseLayerPicker: true,
-    });
-
-    // Fly the camera to San Francisco at the given longitude, latitude, and height.
-    viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(114.31158155473, 30.598466736401, 8000)
-    });
-})
-onBeforeUnmount(() => {
-    if (viewer) {
-        viewer.destroy();
-        viewer = null; // 确保引用被清除
-    }
-});
 </script>
 
 <style scoped>

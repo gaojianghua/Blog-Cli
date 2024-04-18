@@ -2,7 +2,7 @@
  * @Author       : 15257184434 g598670138@163.com
  * @Date         : 2023-01-15 09:25:15
  * @LastEditors: 高江华
- * @LastEditTime: 2024-04-08 10:02:48
+ * @LastEditTime: 2024-04-18 14:59:11
  * @FilePath     : \varlet-nuxt3-example\src\app.d.ts
  * @Description  :
  *
@@ -22,4 +22,8 @@ declare global {
 declare module 'cesium' {
     // 定义或导入Cesium的类型定义
     export = Cesium;
+}
+declare module 'three' {
+    // 定义或导入Cesium的类型定义
+    export = THREE;
 }
