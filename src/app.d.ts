@@ -14,16 +14,9 @@ declare module '*.vue' {
     export default componentOptions;
 }
 declare module './data.ts'
-declare global {
-    interface Window {
-        CESIUM_BASE_URL: string
-    }
+interface Window {
+    CESIUM_BASE_URL: string;
 }
-declare module 'cesium' {
-    // 定义或导入Cesium的类型定义
-    export = Cesium;
-}
-declare module 'three' {
-    // 定义或导入Cesium的类型定义
-    export = THREE;
-}
+declare let Cesium: any;
+declare module 'three'
+declare module 'three/examples/jsm/controls/OrbitControls'

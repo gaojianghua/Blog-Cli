@@ -39,12 +39,15 @@
         "@pinia/nuxt": "^0.4.6",
         "@vueuse/core": "^10.3.0",
         "@vueuse/nuxt": "^10.3.0",
+        "cesium": "^1.116.0",
         "daisyui": "^2.47.0",
         "eslint-plugin-json": "^3.1.0",
         "eslint-plugin-nuxt": "^4.0.0",
+        "gsap": "^3.12.5",
         "pinia": "^2.0.28",
         "postcss-custom-properties": "^13.2.1",
-        "sass": "^1.57.1"
+        "sass": "^1.57.1",
+        "three": "^0.163.0"
     },
     "lint-staged": {
         "*.{js,ts,tsx,jsx}": [

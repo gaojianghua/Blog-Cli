@@ -74,9 +74,7 @@ export default defineNuxtConfig({
                 {
                     src: 'https://lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_28150_11.961f67029185d625b7656c914468febb.js'
                 },
-                { src: 'https://unpkg.com/cesium/Build/Cesium/Cesium.js', defer: true },
-                { src: 'https://cdn.jsdelivr.net/npm/three/build/three.min.js', defer: true },
-                { src: 'https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js', defer: true }
+                { src: 'https://unpkg.com/cesium/Build/Cesium/Cesium.js', defer: true }
             ]
         }
     }
