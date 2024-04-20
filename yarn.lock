@@ -1794,6 +1794,11 @@
   resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-23.1.1.tgz#0ae28ed9c635805557f78c2626464018d5f1b5e2"
   integrity sha512-ZpboH7pCPPeyBWKf8c7TJswtCEQObFo3bOBYalm99NzZarATALYCo5OhbCa/n4RQyJyHfhkdx+hNrdL5ByFYDw==
 
+"@types/dat.gui@^0.7.13":
+  version "0.7.13"
+  resolved "https://registry.yarnpkg.com/@types/dat.gui/-/dat.gui-0.7.13.tgz#40bbdcf72714ce46fe624d9d05e8000f1265653c"
+  integrity sha512-LmG4Pr0mbsB/1WVttf8xaHx45BvSBDGY5D9+0/9AZCbI4vvOguwBHZdKyJMxt5Yst8+icRSHKmr7ClV2u5ZtDA==
+
 "@types/estree@*", "@types/estree@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
@@ -3580,6 +3585,11 @@ dargs@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmmirror.com/dargs/-/dargs-7.0.0.tgz#04015c41de0bcb69ec84050f3d9be0caf8d6d5cc"
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
+
+dat.gui@^0.7.9:
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/dat.gui/-/dat.gui-0.7.9.tgz#860cab06053b028e327820eabdf25a13cf07b17e"
+  integrity sha512-sCNc1OHobc+Erc1HqiswYgHdVNpSJUlk/Hz8vzOCsER7rl+oF/4+v8GXFUyCgtXpoCX6+bnmg07DedLvBLwYKQ==
 
 data-uri-to-buffer@^4.0.0:
   version "4.0.0"

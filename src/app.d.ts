@@ -19,4 +19,5 @@ interface Window {
 }
 declare let Cesium: any;
 declare module 'three'
+declare module 'dat.gui'
 declare module 'three/examples/jsm/controls/OrbitControls'
