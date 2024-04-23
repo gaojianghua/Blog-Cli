@@ -2,7 +2,7 @@
  * @Author: 高江华 g598670138@163.com
  * @Date: 2024-04-08 10:30:40
  * @LastEditors: 高江华
- * @LastEditTime: 2024-04-18 14:54:32
+ * @LastEditTime: 2024-04-23 15:29:57
  * @Description: file content
 -->
 <template>
@@ -14,6 +14,9 @@
             <template v-if="routeParams.id == '1'">
                 <three-one />
             </template>
+            <template v-if="routeParams.id == '2'">
+                <three-two />
+            </template>
         </div>
     </div>
 </template>
@@ -23,6 +26,7 @@ import { ref } from 'vue'
 import { useRoute } from 'vue-router';
 import CesiumOne from '@/components/works/cesium-one.vue'
 import ThreeOne from '@/components/works/three-one.vue'
+import ThreeTwo from '@/components/works/three-two.vue'
 const route = useRoute();
 const routeParams = route.params;
 console.log(routeParams);

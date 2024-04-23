@@ -2,7 +2,7 @@
  * @Author: 高江华 g598670138@163.com
  * @Date: 2024-04-18 14:43:09
  * @LastEditors: 高江华
- * @LastEditTime: 2024-04-23 10:28:59
+ * @LastEditTime: 2024-04-23 16:44:23
  * @Description: file content
 -->
 <template>
@@ -52,13 +52,26 @@ onMounted(() => {
         // 创建坐标系
         axesHelper = new THREE.AxesHelper(5)
         // 创建几何体
-        cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-        // 创建材质
-        cubeMaterial = new THREE.MeshBasicMaterial({
-            color: 0xffff00
-        });
-        // 根据几何体和材质创建物体
-        cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+        for (let i = 0; i < 50; i++) {
+            cubeGeometry = new THREE.BufferGeometry();
+            const vertices = new Float32Array(9)
+            for (let j = 0; j < 9; j++) {
+                vertices[j] = Math.random() * 10 - 5;
+            }
+            cubeGeometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3))
+            // 创建材质
+            let color = new THREE.Color(Math.random(), Math.random(), Math.random())
+            cubeMaterial = new THREE.MeshBasicMaterial({
+                color: color
+            });
+            // 根据几何体和材质创建物体
+            cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+            // 将物体添加到场景中
+            scene.add(cube);
+        }
+        
+        
+        
         // 创建时钟
         clock = new THREE.Clock();
         // 设置动画
@@ -96,7 +109,6 @@ onMounted(() => {
         //     }else {
         //         animate1.resume()
         //     }
-            
         // })
         // 监听窗口变化，更新渲染画面
         window.addEventListener('resize', () => {
@@ -154,8 +166,6 @@ onMounted(() => {
     scene.add(axesHelper);
     // 设置相机位置
     camera.position.set(0, 0, 10);
-    // 将物体添加到场景中
-    scene.add(cube);
     // 将WebGL渲染的canvas内容添加到DOM上
     threeContainer.value!.appendChild(renderer.domElement);
     // 添加阻尼效果
