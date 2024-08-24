@@ -116,7 +116,7 @@ const list = [
 const menus = [
     {
         name: '首页',
-        path: '/'
+        path: '/home'
     },
     {
         name: '文章',
@@ -125,6 +125,10 @@ const menus = [
     {
         name: '作品',
         path: '/works'
+    },
+    {
+        name: '模板',
+        path: '/template'
     },
     {
         name: '游戏',
@@ -178,6 +182,33 @@ const worksMenus = [
     }
 ]
 
+const templateMenus = [
+    {
+        name: '全部',
+        type: 0
+    },
+    {
+        name: '官网',
+        type: 1
+    },
+    {
+        name: '后台',
+        type: 2
+    },
+    {
+        name: '小程序',
+        type: 3
+    },
+    {
+        name: 'APP',
+        type: 4
+    },
+    {
+        name: '多端',
+        type: 5
+    }
+]
+
 const defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwNjZhYTIxZC0zOGRmLTQxZDUtYjY3YS05MWNmYTViOGQxNTYiLCJpZCI6MjA3MjIzLCJpYXQiOjE3MTI1NDU3ODJ9.x3KnX-97CZIytvhOgG5Ox5TopzNUb_qH4_6VSwpLUA4'
 
 export default {
@@ -187,5 +218,6 @@ export default {
     menus,
     backMenus,
     worksMenus,
+    templateMenus,
     defaultAccessToken
 };

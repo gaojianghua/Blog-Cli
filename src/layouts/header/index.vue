@@ -2,7 +2,7 @@
  * @Author: 高江华 g598670138@163.com
  * @Date: 2023-08-04 18:00:23
  * @LastEditors: 高江华
- * @LastEditTime: 2023-08-31 16:13:34
+ * @LastEditTime: 2024-08-24 10:27:11
  * @Description: file content
 -->
 <template>
@@ -19,7 +19,7 @@
                     v-for="(item, i) in menus"
                     :key="i"
                     class="text-cd ml-12 cursor-pointer"
-                    :class="route.path == item.path ? 'main-color' : ''"
+                    :class="route.path.includes(item.path) ? 'main-color' : ''"
                 >
                     <NuxtLink class="py-6" :to="item.path">{{ item.name }}</NuxtLink>
                 </div>

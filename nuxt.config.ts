@@ -2,7 +2,7 @@
  * @Author       : 15257184434 g598670138@163.com
  * @Date         : 2023-01-15 09:13:13
  * @LastEditors: 高江华
- * @LastEditTime: 2024-04-18 17:05:23
+ * @LastEditTime: 2024-08-24 15:48:55
  * @FilePath     : \varlet-nuxt3-example\nuxt.config.ts
  * @Description  :
  *
@@ -25,6 +25,14 @@ export default defineNuxtConfig({
         public: {
             apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL
         }
+    },
+    router: {
+        options: {
+            end: true
+        }
+    },
+    routeRules: {
+        '': { redirect: '/home' }
     },
     modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
     css: ['~/assets/styles/init.css'],

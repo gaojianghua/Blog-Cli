@@ -2,7 +2,7 @@
  * @Author: 高江华 g598670138@163.com
  * @Date: 2024-04-08 09:57:32
  * @LastEditors: 高江华
- * @LastEditTime: 2024-04-08 10:02:00
+ * @LastEditTime: 2024-08-24 11:49:33
  * @Description: file content
 -->
 <template>
@@ -11,18 +11,18 @@
             <div
                 v-for="(item, i) in worksMenus"
                 :key="i"
-                class="text-cd ml-[2rem] flex h-[5rem] cursor-pointer items-center justify-around text-[1.5rem]"
+                class="text-cd ml-[2rem] flex h-[5rem] cursor-pointer items-center justify-around text-[1.2rem]"
                 :class="menuIndex == item.type ? 'main-color' : 'text-white'"
                 @click="chooseMenu(item.type)"
             >
                 {{ item.name }}
             </div>
         </div>
-        <div ref="el" class="box mt-[0.5rem] h-full flex-1 overflow-y-scroll p-3">
-            <div v-if="list.length === 0" class="flex flex-col items-center justify-center">
-                <span class="mt-5 text-[1.2rem] text-[#ccc]">作者很懒，未发布新的内容！</span>
+        <div class="box coll mt-[0.5rem] flex p-3">
+            <div v-if="list.length === 0" class="flex w-full justify-center">
+                <span class="mt-2 text-[1.2rem] text-[#ccc]">作者很懒，未发布新的内容！</span>
             </div>
-            <div v-else class="flex flex-wrap items-center justify-between">
+            <div v-else ref="el" class="el flex h-full flex-wrap items-center justify-between overflow-y-scroll rounded-lg">
                 <div
                     v-for="(item, j) in list"
                     :key="j"
@@ -95,6 +95,14 @@ watch(arrivedState, newValue => {
 
 <style lang="scss" scoped>
     .page {
-        height: calc(100vh - 5rem - 1.5rem);
+        height: calc(100vh - 5rem - 1.6rem);
+
+        .coll{
+            height: calc(100% - 5rem - 0.5rem);
+        }
+
+        .el{
+            height: calc(100vh - 5rem - 1.7rem - 7rem);
+        }
     }
 </style>

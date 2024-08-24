@@ -32,6 +32,10 @@ body {
     color: var(--main-color) !important;
 }
 
+.main-bg-color {
+    background-color: var(--main-color) !important;
+}
+
 .main {
     width: 100vw;
     height: 100vh;
@@ -77,12 +81,12 @@ button {
 }
 
 .box {
-    border: 1px solid rgba(26, 209, 165, 0.1);
+    border: 0.1rem solid rgba(26, 209, 165, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
 }
 .box-cd:hover {
-    border: 1px solid rgba(26, 209, 165, 0.8);
+    border: 0.1rem solid rgba(26, 209, 165, 0.8);
     background-color: rgba(255, 255, 255, 0.2);
 }
 .text-cd:hover {
