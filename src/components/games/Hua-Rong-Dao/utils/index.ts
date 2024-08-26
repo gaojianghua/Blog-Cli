@@ -6,29 +6,43 @@ export interface IMode {
 
 export interface IPuzzle {
     isStart: boolean
+    isOver: boolean,
+    elapsedTime: number,
     randomData: Array<number>
     finishData: string
     gameImg: string
     level: number
     step: number
+    time: number
+    formatTime: string
+    overTime: string
+    overStep: number
 }
 
 // 拼图类
 class Puzzle implements IPuzzle {
     isStart = false
+    isOver = false
+    elapsedTime = 0
     randomData: Array<number> = []
     finishData = ""
-    gameImg = "zdg"
+    gameImg = "htl"
     level = 3
     step = 0
+    time = 0
+    formatTime = '00:00:00'
+    overTime = ''
+    overStep = 0
     constructor() { }
     // 初始化
     init({ gameImg, level }: IMode) {
         this.step = 0
         this.level = level
         this.gameImg = gameImg
+        this.elapsedTime = 0
         this.randomData = this.getRandomData()
         this.isStart = !this.isStart
+        this.toggleTimer()
         if (this.isStart) this.finishData = this.getFinishData()
     }
     // 鼠标移动图片
@@ -96,23 +110,26 @@ class Puzzle implements IPuzzle {
     // 检查是否拼图完成
     finish() {
         if (this.randomData.join("") == this.finishData) {
-            this.randomData = []
-            this.step = 0
             this.isStart = false
-            
-            // ElMessageBox.alert(`恭喜你，闯关成功，仅用${this.step}步`, "提示", {
-            //     confirmButtonText: "OK",
-            //     callback: (action: Action) => {
-            //         this.randomData = []
-            //         this.step = 0
-            //         this.isStart = false
-            //     },
-            // })
+            this.isOver = true
+            this.overTime = this.formatTime
+            this.overStep = this.step
+            this.step = 0
+            this.toggleTimer()
+            const time = setTimeout(() => {
+                this.randomData = []
+                this.isOver = false
+                clearTimeout(time)
+            }, 3000)
         }
     }
     // 切换游戏图片
     setImg(img: string) {
         this.gameImg = img
+    }
+    // 切换游戏等级
+    setLevel(value: number) {
+        this.level = value
     }
     // 根据不同难度生成拼图完成时的数据用来对比，判断是否完成
     getFinishData(): string {
@@ -138,6 +155,25 @@ class Puzzle implements IPuzzle {
         // 添加最大数字作为空白位
         randomData.push(max + 1)
         return randomData
+    }
+    setFormatTime() {
+        const seconds = Math.floor(this.elapsedTime / 1000);
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+        return `${hours.toString().padStart(2, '0')}:${(minutes % 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`;
+    }
+    toggleTimer () {
+        if (!this.isStart) {
+            this.elapsedTime = 0
+            this.formatTime = this.setFormatTime()
+            clearInterval(this.time);
+        } else {
+            const startTime = Date.now() - this.elapsedTime;
+            this.time = window.setInterval(() => {
+                this.elapsedTime = Date.now() - startTime;
+                this.formatTime = this.setFormatTime()
+            }, 1000);
+        }
     }
 }
 export default new Puzzle()

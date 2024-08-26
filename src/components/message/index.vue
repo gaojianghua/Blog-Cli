@@ -22,15 +22,15 @@
 </template>
 
 <script setup lang="ts">
-    type MessageType = 'default' | 'success' | 'warning' | 'error';
+type MessageType = 'default' | 'success' | 'warning' | 'error';
 
-    interface MessageProps {
-        tips?: string;
-        type?: MessageType;
-        visible?: boolean;
-        duration?: number;
-        id?: string;
-    }
+interface MessageProps {
+    tips?: string;
+    type?: MessageType;
+    visible?: boolean;
+    duration?: number;
+    id?: string;
+}
 
 const props = withDefaults(defineProps<MessageProps>(), {
     tips: '',

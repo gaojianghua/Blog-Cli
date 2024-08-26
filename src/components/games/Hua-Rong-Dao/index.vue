@@ -1,8 +1,9 @@
+<!-- eslint-disable tailwindcss/migration-from-tailwind-2 -->
 <!--
  * @Author: 高江华 g598670138@163.com
  * @Date: 2024-04-08 09:53:43
  * @LastEditors: 高江华
- * @LastEditTime: 2024-08-24 18:14:48
+ * @LastEditTime: 2024-08-26 12:46:26
  * @Description: file content
 -->
 <template>
@@ -24,6 +25,13 @@
                 </div>
             </div>
         </div>
+        <div v-if="isOver" class="fixed inset-0 z-20 flex items-center justify-center bg-zinc-900 bg-opacity-50">
+            <div class="flex flex-col items-center justify-center rounded-xl bg-zinc-50 py-8">
+                <h3 class="text-2xl font-bold">温馨提示</h3>
+                <div class="mt-5 px-20 text-xl">恭喜你，闯关成功。</div>
+                <div class="mt-5 px-20 text-xl">用时：{{ overTime }}、步数：{{ overStep }}</div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -32,8 +40,7 @@ import Control from './components/control.vue';
 import { onBeforeUnmount, onMounted, reactive, toRefs } from 'vue';
 import Puzzle from './utils/index';
 let games = reactive(Puzzle);
-const { gameImg, randomData, level, isStart } = toRefs(games);
-
+const { gameImg, randomData, level, isStart, isOver, overStep, overTime } = toRefs(games);
 
 // 鼠标移动图片
 const handleMove = (index: number) => {

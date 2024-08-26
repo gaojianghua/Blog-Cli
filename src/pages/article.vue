@@ -2,7 +2,7 @@
  * @Author: 高江华 g598670138@163.com
  * @Date: 2024-04-08 09:53:43
  * @LastEditors: 高江华
- * @LastEditTime: 2024-08-24 11:44:57
+ * @LastEditTime: 2024-08-24 18:22:20
  * @Description: file content
 -->
 <template>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="box ml-[0.5rem] h-full w-[20%] p-3 text-center text-white">
+        <div class="box ml-[0.5rem] h-full w-[20%] p-3 text-center text-xl text-white">
             广 告 位
         </div>
     </div>
