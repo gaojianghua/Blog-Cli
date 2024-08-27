@@ -1,3 +1,10 @@
+<!--
+ * @Author: 高江华 g598670138@163.com
+ * @Date: 2024-04-08 09:53:43
+ * @LastEditors: 高江华
+ * @LastEditTime: 2024-08-27 11:45:33
+ * @Description: file content
+-->
 <template>
     <div class="page mx-auto flex w-[100rem]">
         <div class="box h-full flex-1" />
@@ -10,7 +17,7 @@
                     <span class="main-color ml-[1.5rem] tracking-[1.5rem]">分享</span>
                 </div>
             </div>
-            <div class="overflow-y-scroll" :style="{ height: 'calc(100% - 2.8% - 3rem)' }">
+            <div class="overflow-y-scroll rounded-3xl" :style="{ height: 'calc(100% - 2.5% - 3rem)' }">
                 <div class="mt-5 px-[3%]">
                     <div class="text-center text-[1.3rem] font-medium tracking-wider text-[#ffffff]">相关文章</div>
                     <div
@@ -90,6 +97,6 @@ console.log(route.params.id);
 
 <style scoped>
     .page {
-        height: calc(100vh - 5rem - 1.5rem);
+        height: calc(100vh - 5rem - 1.6rem);
     }
 </style>
