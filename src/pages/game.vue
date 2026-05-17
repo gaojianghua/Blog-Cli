@@ -22,6 +22,9 @@
             <div v-if="menuIndex == 0" class="h-full">
                 <HuaRongDao />
             </div>
+            <div v-else-if="menuIndex == 1" class="h-full">
+                <GluttonousSnake />
+            </div>
             <div v-else class="flex flex-col items-center justify-center">
                 <span class="mt-5 text-[1.2rem] text-[#ccc]">游戏开发中，敬请期待哦</span>
             </div>
@@ -34,11 +37,16 @@
 import { ref } from 'vue';
 import data from '@/data';
 import HuaRongDao from '@/components/games/Hua-Rong-Dao/index.vue';
+import GluttonousSnake from '@/components/games/Gluttonous-Snake/index.vue';
 
 const menuIndex = ref(0);
 const gameMenus = ref(data.gameMenus);
 
 const chooseMenu = (i: number) => {
+    if (i == menuIndex.value) {
+        return;
+    }
+    console.log(i);
     menuIndex.value = i;
 };
 </script>

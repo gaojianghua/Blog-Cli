@@ -1,4 +1,4 @@
-import { NuxtApp, UseFetchOptions } from 'nuxt/app';
+import type { NuxtApp, UseFetchOptions } from 'nuxt/app'
 
 export enum ResultEnum {
     SUCCESS = 200,

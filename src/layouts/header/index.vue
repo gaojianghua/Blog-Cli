@@ -10,7 +10,7 @@
         <div class="page-title box flex justify-between px-[8.33rem]">
             <h1 class="title-text cursor-pointer text-[1.9rem] font-medium leading-[5rem]">
                 <NuxtLink class="flex items-center" to="/">
-                    <img src="~/assets/image/logo.png" class="w-[4.5rem]" alt="logo">
+                    <img src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/logo.png" class="w-[4.5rem]" alt="logo">
                     Mr. Gao
                 </NuxtLink>
             </h1>

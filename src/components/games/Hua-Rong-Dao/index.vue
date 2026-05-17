@@ -10,7 +10,7 @@
     <div class="container flex h-full flex-col">
         <div class="other mb-3 flex w-full">
             <div class="box h-[15rem] w-[15rem] shrink-0 overflow-hidden">
-                <img :src="'/_nuxt' + `/assets/image/${gameImg}/${gameImg}.jpg`">
+                <img :src="`https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/${gameImg}/${gameImg}.jpg`">
             </div>
             <Control :games="games" />
         </div>
@@ -21,7 +21,7 @@
             </div>
             <div v-show="isStart" class="clearfix flex h-full w-full flex-wrap">
                 <div v-for="item in randomData" :key="item" :class="`img${level}`" @click="handleMove(item)">
-                    <img v-if="item != randomData.length" class=" block h-full w-full" :src="'/_nuxt' + `/assets/image/${gameImg}/${level}/${item}.jpg`">
+                    <img v-if="item != randomData.length" class=" block h-full w-full" :src="`https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/${gameImg}/${level}/${item}.jpg`">
                 </div>
             </div>
         </div>

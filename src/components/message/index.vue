@@ -13,9 +13,9 @@
                 'bg-info': status === 'default'
             }"
         >
-            <img v-if="status === 'success'" class="h-[2rem] w-[2rem]" src="../../assets/image/success.png">
-            <img v-if="status === 'error'" class="h-[2rem] w-[2rem]" src="../../assets/image/error.png">
-            <img v-if="status === 'warning'" class="h-[2rem] w-[2rem]" src="../../assets/image/warning.png">
+            <img v-if="status === 'success'" class="h-[2rem] w-[2rem]" src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/success.png">
+            <img v-if="status === 'error'" class="h-[2rem] w-[2rem]" src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/error.png">
+            <img v-if="status === 'warning'" class="h-[2rem] w-[2rem]" src="https://blog-cli.oss-cn-hangzhou.aliyuncs.com/assets/image/warning.png">
             <span class="text-[1.4rem]" :class="{ 'ml-2': status !== 'default' }">{{ title }}</span>
         </div>
     </div>
